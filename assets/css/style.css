@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Homemade+Apple|Special+Elite&display=swap');
+
+/* ==============STYLING==============*/
+
+/*--------HTML, BODY Styling-----*/
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Special Elite', sans-serif;
+  color: #fff;
+  background-color: #2c2c2d;
+}
+
+/*------------BUTTON STYLING--------*/
+
+.btn-secondary {
+    background-color: #c30e0e;
+    border-color: #c30e0e;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-size: 350%;
+    padding-top: 1.5%;
+    
+}
+
+
+/*------------Instructions STYLING--------*/ 
+
+.instructions {
+  font-size: 150%;
+  display: inline-block;
+  margin-left: 6%;
+  margin-right: 6%;
+}
