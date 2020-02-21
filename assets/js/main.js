@@ -4,6 +4,21 @@
 
 //on reset, cards shuffled, reset game board, reset timer 
 
+// Shuffle function from http://stackoverflow.com/a/2450976
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+}
+
 //if timer = 0, game over
 
 // on click, moves increases by 1
@@ -34,3 +49,6 @@
 //if player wins, produce success message (and rating out of three?)
 
 //if player loses (out of time, or exceeds moves), produce loss message
+
+//
+

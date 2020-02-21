@@ -74,6 +74,13 @@ body {
 
 /*--------------GAME.html styling---------*/
 
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
 .game-container {
 /* Flexbox */  
   flex-direction: column;
@@ -145,5 +152,14 @@ body {
   cursor: pointer;
 }
 
+/* for click reveal */
 
+.card.open {
+  transform: rotateY(0);
+  background: #421a1a;
+}
+
+.card.show {
+  font-size: 75px;
+}
 
