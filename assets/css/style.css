@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Homemade+Apple|Special+Elite&display=swap');
 
+/* ==============  MEDIA QUERIES   ==============*/
+
+
+
+
 /* ==============STYLING==============*/
 
 /*--------HTML, BODY Styling-----*/
@@ -11,6 +16,7 @@ body {
   font-family: 'Special Elite', sans-serif;
   color: #fff;
   background-color: #2c2c2d;
+  box-sizing: border-box;
 }
 
 /*------------BUTTON STYLING--------*/
@@ -34,3 +40,47 @@ body {
   margin-left: 6%;
   margin-right: 6%;
 }
+
+
+/*--------------GAME.html styling---------*/
+
+.game-container {
+/* Flexbox */  
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*------------REQUIRMENTS Styling--------*/
+
+
+/*------------GAMEDECK Styling ---------*/
+
+.gamedeck {
+  min-height: 600px;
+  width: 1350px;
+  background: #888888;
+  border-radius: 15px;
+  padding: 30px;
+/* Flexbox */ 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card,
+.matchedcard {
+  height: 175px;
+  width: 175px;
+  background: #424242;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1%;
+}
+
+
+
