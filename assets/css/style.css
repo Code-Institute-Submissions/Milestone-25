@@ -2,7 +2,37 @@
 
 /* ==============  MEDIA QUERIES   ==============*/
 
+/*--------Bootstrap Breakpoints---------*/
 
+/* xs devices (<576px) = default in Bootstrap (hence no media query)
+
+sm devices (>576px) = @media max-width: 576px
+
+md devices (>768px) = @media max-width: 768px
+
+lg devices (>992px) = @media max-width: 992px
+
+xl devices (>1200px) = @media max-width: 1200px
+*/
+
+/*--------Media Queries--------*/
+
+/* max-width, not min-width, for mobile-first styling */
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+
+}
+
+@media (max-width: 576px) {
+
+
+
+}
 
 
 /* ==============STYLING==============*/
@@ -55,6 +85,32 @@ body {
 
 /*------------REQUIRMENTS Styling--------*/
 
+.requirements {
+  text-align: left;
+  margin-top: 35px;
+  margin-bottom: 25px;
+  width: 950px;
+  font-size: 200%; 
+  
+}
+
+.requirements .timer {
+  float: left;
+}
+
+.requirements .restart {
+  float: right;
+}
+
+.requirements .moves {
+  float: inherit;
+}
+.requirements-timer {
+  text-align: center;
+  margin-top:35px;
+  font-size: 300%; 
+}
+
 
 /*------------GAMEDECK Styling ---------*/
 
@@ -76,10 +132,17 @@ body {
   height: 175px;
   width: 175px;
   background: #424242;
+  border-radius: 8px;
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+  margin: 1%;
+/* shrink font so that when a card is 'flipped', font enlarges */
+  font-size: 0;
+  color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1%;
+  /* add cursor to indicate interactivity to user */
+  cursor: pointer;
 }
 
 
