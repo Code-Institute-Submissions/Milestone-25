@@ -169,12 +169,21 @@ a:hover {
 
 /* for click reveal */
 
-.card.open {
-  transform: rotateY(0);
+.open {
+  font-size: 75px;
   background: #421a1a;
+  /* fix for webpages */
+  -webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+  /* return cursor to default to inform user card is no longer clickable */
+  cursor: default;
 }
 
-.card.show {
+.display {
   font-size: 75px;
 }
 
+.close {
+  pointer-events: none;
+	opacity: 0.9;
+}
