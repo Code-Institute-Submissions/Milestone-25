@@ -1,29 +1,74 @@
 $(document).ready(function() {
 
-// =================================CLICK TO VIEW=========================== //
+    // =================================START GAME=========================== //   
 
-//what's with the wierd transfering click?
+    $(document).click(function() {
+        // =================================TIMER COUNTDOWN=========================== //
+
+
+        //need to sort for time rather than no.?
+        var updatetime = function() {
+            $('.timer').each(function() {
+                var count = parseInt($(this).html());
+                if (count !== 0) {
+                    $(this).html(count - 1);
+                }
+            });
+        };
+        setInterval(updatetime, 1000);
+    })
+
+
+    // =================================CLICK TO VIEW=========================== //
+
+    //what's with the wierd transfering click?
     //on click, display card 
     $('.card').click(function() {
         $(this).addClass('open');
-    })
+    });
+
     $('.matchedcard').click(function() {
         $(this).addClass('open');
-    })
-
-// =================================TIMER COUNTDOWN=========================== //
-
-
-//need to sort for time rather than no.?
-  var updatetime = function() {
-    $('.timer').each(function() {
-      var count = parseInt($(this).html());
-      if (count !== 0) {
-        $(this).html(count - 1);
-      }
     });
-  };
-  setInterval(updatetime, 1000);
+
+
+    // =================================CARD SHUFFLE=========================== //  
+
+    let cardarray = []
+
+    $('.card, .matchedcard').push(cardarray);
+
+
+    // Shuffle function from http://stackoverflow.com/a/2450976
+
+    function shuffle(cardarray) {
+        var currentIndex = cardarray.length,
+            temporaryValue, randomIndex;
+
+        while (currentIndex !== 0) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+            temporaryValue = cardarray[currentIndex];
+            cardarray[currentIndex] = cardarray[randomIndex];
+            cardarray[randomIndex] = temporaryValue;
+        }
+
+        return cardarray;
+    }
+
+
+
+
+    const deck = document.querySelector(".deck");
+
+    function startGame() {
+        var shuffledCards = shuffle(cards);
+        for (var i = 0; i < shuffledCards.length; i++) {
+            [].forEach.call(shuffledCards, function(item) {
+                deck.appendChild(item);
+            });
+        }
+    }
 
 })
 
