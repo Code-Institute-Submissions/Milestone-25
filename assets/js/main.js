@@ -1,10 +1,7 @@
 $(document).ready(function() {
-
-    // =================================START GAME=========================== //   
-
-    $(document).click(function() {
+    // =================================START GAME=========================== //  
+    var startGame = function() {
         // =================================TIMER COUNTDOWN=========================== //
-
 
         //need to sort for time rather than no.?
         var updatetime = function() {
@@ -16,7 +13,21 @@ $(document).ready(function() {
             });
         };
         setInterval(updatetime, 1000);
-    })
+
+        //entire game deck of cards
+        const gamedeck = $(".gamedeck");
+
+        var card = $(".card, .matchedcard");
+        var cards = [...card];
+
+        var cardshuffle = shuffle(cards);
+        for (var i = 0; i < cardshuffle.length; i++) {
+            [].forEach.call(cardshuffle, function(item) {
+                gamedeck.appendChild(item);
+            })
+        }
+
+    }
 
 
     // =================================CLICK TO VIEW=========================== //
@@ -34,41 +45,24 @@ $(document).ready(function() {
 
     // =================================CARD SHUFFLE=========================== //  
 
-    let cardarray = []
-
-    $('.card, .matchedcard').push(cardarray);
-
-
     // Shuffle function from http://stackoverflow.com/a/2450976
 
-    function shuffle(cardarray) {
-        var currentIndex = cardarray.length,
+    function shuffle(array) {
+        var currentIndex = array.length,
             temporaryValue, randomIndex;
 
         while (currentIndex !== 0) {
             randomIndex = Math.floor(Math.random() * currentIndex);
             currentIndex -= 1;
-            temporaryValue = cardarray[currentIndex];
-            cardarray[currentIndex] = cardarray[randomIndex];
-            cardarray[randomIndex] = temporaryValue;
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
         }
 
-        return cardarray;
+        return array;
     }
 
-
-
-
-    const deck = document.querySelector(".deck");
-
-    function startGame() {
-        var shuffledCards = shuffle(cards);
-        for (var i = 0; i < shuffledCards.length; i++) {
-            [].forEach.call(shuffledCards, function(item) {
-                deck.appendChild(item);
-            });
-        }
-    }
+    startGame();
 
 })
 
