@@ -183,7 +183,7 @@ jQuery.fn = jQuery.prototype = {
 		return num < 0 ? this[ num + this.length ] : this[ num ];
 	},
 
-	// Take an array of elements and push it onto the stack
+	// Take an array of elements and push it onto the stackdeck
 	// (returning the new matched element set)
 	pushStack: function( elems ) {
 

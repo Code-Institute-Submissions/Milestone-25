@@ -5,13 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script type="text/javascript" src="./assets/js/main.js"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-  <script src="https://use.fontawesome.com/releases/v5.12.0/js/all.js"></script>
+  <link rel="stylesheet prefetch" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/6ec9dff764.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/css/style.css" media="screen">
   <title>Memoryphile Home</title>
+
 </head>
 
 <body>
@@ -19,90 +17,29 @@
   <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
     <div class="container-fluid">
       <a class="navbar-brand"><img src="./assets/images/logo.png" class="logo" alt="Memoryphile Logo"></a>
-      <a class="nav-link" href="./index.html"><i class="fas fa-home"></i></a>
+      <a class="nav-link" href="./index.html"><i class="fa fa-home"></i></a>
     </div>
   </nav>
-</body>
 
-<!--Unordered list to form the grid for matching deck-->
-<div class="container padding game-container">
-  <!-- section for move counter and restart -->
-  <section class="requirements">
-    Moves: <span class="moves">0</span>
-    <div class="restart"><i class="fas fa-redo"></i></div>
-  </section>
+  <div class="gameContainer">
+    <!-- section for move counter and restart -->
+    <section class="requirements">
+      Moves: <span class="moves">0</span>
+      <div class="restart"><i class="fa fa-redo"></i></div>
+    </section>
+    <ul class="gamedeck"></ul>
+  </div>
 
-  <ul class="gamedeck">
-    <!--Original Cards-->
-    <li class="card" type="bomb">
-      <i class="fas fa-bomb"></i>
-    </li>
-    <li class="card" type="biohazard">
-      <i class="fas fa-biohazard"></i>
-    </li>
-    <li class="card" type="secret">
-      <i class="fas fa-user-secret"></i>
-    </li>
-    <li class="card" type="question">
-      <i class="fas fa-question-circle"></i>
-    </li>
-    <li class="card" type="search">
-      <i class="fas fa-search"></i>
-    </li>
-    <li class="card" type="skull">
-      <i class="fas fa-skull"></i>
-    </li>
-    <li class="card" type="building">
-      <i class="fas fa-landmark"></i>
-    </li>
-    <li class="card" type="jet">
-      <i class="fas fa-fighter-jet"></i>
-    </li>
-    <li class="card" type="binocular">
-      <i class="fas fa-binoculars"></i>
-    </li>
-
-    <!--Matching Cards-->
-
-    <li class="matchedcard" type="bomb">
-      <i class="fas fa-bomb"></i>
-    </li>
-    <li class="matchedcard" type="biohazard">
-      <i class="fas fa-biohazard"></i>
-    </li>
-    <li class="matchedcard" type="secret">
-      <i class="fas fa-user-secret"></i>
-    </li>
-    <li class="matchedcard" type="question">
-      <i class="fas fa-question-circle"></i>
-    </li>
-    <li class="matchedcard" type="search">
-      <i class="fas fa-search"></i>
-    </li>
-    <li class="matchedcard" type="skull">
-      <i class="fas fa-skull"></i>
-    </li>
-    <li class="matchedcard" type="building">
-      <i class="fas fa-landmark"></i>
-    </li>
-    <li class="matchedcard" type="jet">
-      <i class="fas fa-fighter-jet"></i>
-    </li>
-    <li class="matchedcard" type="binocular">
-      <i class="fas fa-binoculars"></i>
-    </li>
-  </ul>
-
-
-</div>
-<div class="container padding game-container">
   <!-- section for timer -->
   <section class="requirements-timer">
-   00:<span class="timer">59</span>
+    00:<span class="timer">59</span>
   </section>
 
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
 
 
-  </body>
 
 </html>

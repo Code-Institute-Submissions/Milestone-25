@@ -19,20 +19,11 @@ xl devices (>1200px) = @media max-width: 1200px
 
 /* max-width, not min-width, for mobile-first styling */
 
-@media (max-width: 992px) {
+@media (max-width: 992px) {}
 
-}
+@media (max-width: 768px) {}
 
-@media (max-width: 768px) {
-
-
-}
-
-@media (max-width: 576px) {
-
-
-
-}
+@media (max-width: 576px) {}
 
 
 /* ==============STYLING==============*/
@@ -41,12 +32,12 @@ xl devices (>1200px) = @media max-width: 1200px
 
 html,
 body {
-  height: 100%;
-  width: 100%;
-  font-family: 'Special Elite', sans-serif;
-  color: #fff;
-  background-color: #2c2c2d;
-  box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    font-family: 'Special Elite', sans-serif;
+    color: #fff;
+    background-color: #2c2c2d;
+    box-sizing: border-box;
 }
 
 /*------------BUTTON STYLING--------*/
@@ -58,17 +49,17 @@ body {
     margin-bottom: 10%;
     font-size: 350%;
     padding-top: 1.5%;
-    
+
 }
 
 
-/*------------Instructions STYLING--------*/ 
+/*------------Instructions STYLING--------*/
 
 .instructions {
-  font-size: 150%;
-  display: inline-block;
-  margin-left: 6%;
-  margin-right: 6%;
+    font-size: 150%;
+    display: inline-block;
+    margin-left: 6%;
+    margin-right: 6%;
 }
 
 
@@ -81,22 +72,22 @@ body {
 }
 
 
-.game-container {
-/* Flexbox */  
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.gameContainer {
+    /* Flexbox */
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo {
-  height: 25px;
+    height: 25px;
 }
 
 .nav-link {
-  padding-top: 5px;
-  color: #fff;
-  font-size: 25px; 
+    padding-top: 5px;
+    color: #fff;
+    font-size: 25px;
 }
 
 a:hover {
@@ -108,82 +99,90 @@ a:hover {
 /*------------REQUIRMENTS Styling--------*/
 
 .requirements {
-  text-align: left;
-  margin-top: 35px;
-  margin-bottom: 25px;
-  width: 950px;
-  font-size: 200%; 
-  
+    text-align: left;
+    margin-top: 35px;
+    margin-bottom: 25px;
+    width: 950px;
+    font-size: 200%;
+
 }
 
 .requirements .timer {
-  float: left;
+    float: left;
 }
 
 .requirements .restart {
-  float: right;
+    float: right;
 }
 
 .requirements .moves {
-  float: inherit;
+    float: inherit;
 }
+
 .requirements-timer {
-  text-align: center;
-  margin-top:35px;
-  font-size: 300%; 
+    text-align: center;
+    margin-top: 35px;
+    font-size: 300%;
 }
 
 
 /*------------GAMEDECK Styling ---------*/
 
 .gamedeck {
-  min-height: 600px;
-  width: 1350px;
-  background: #888888;
-  border-radius: 15px;
-  padding: 30px;
-/* Flexbox */ 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+    min-height: 600px;
+    width: 1350px;
+    background: #888888;
+    border-radius: 15px;
+    padding: 30px;
+    /* Flexbox */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.card,
-.matchedcard {
-  height: 175px;
-  width: 175px;
-  background: #424242;
-  border-radius: 8px;
-  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
-  margin: 1%;
-/* shrink font so that when a card is 'flipped', font enlarges */
-  font-size: 0;
-  color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* add cursor to indicate interactivity to user */
-  cursor: pointer;
+.gamedeck .card {
+    height: 175px;
+    width: 175px;
+    background: #424242;
+    border-radius: 8px;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    margin: 1%;
+    /* shrink font so that when a card is 'flipped', font enlarges */
+    font-size: 0;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* add cursor to indicate interactivity to user */
+    cursor: pointer;
 }
 
 /* for click reveal */
 
-.open {
-  font-size: 75px;
-  background: #421a1a;
-  /* fix for webpages */
-  -webkit-backface-visibility: visible !important;
-	backface-visibility: visible !important;
-  /* return cursor to default to inform user card is no longer clickable */
-  cursor: default;
+.gamedeck .card.open {
+    transform: rotateY(0) !important;
+    font-size: 75px;
+    background: #421a1a;
+    /* fix for webpages */
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    /* return cursor to default to inform user card is no longer clickable */
+    cursor: default;
 }
 
-.display {
-  font-size: 75px;
+.gamedeck .card.show {
+    font-size: 75px;
+    display: inherit!important;
 }
 
-.close {
-  pointer-events: none;
-	opacity: 0.9;
+.gamedeck .card.close {
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+.gamedeck .card.match {
+    cursor: default;
+    background: #02ccba;
+    font-size: 50px;
 }
