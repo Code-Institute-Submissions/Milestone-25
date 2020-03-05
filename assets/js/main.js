@@ -6,6 +6,7 @@ let cards = ['bomb', 'bomb', 'landmark', 'landmark', 'search', 'search', 'questi
     $gamedeck = $('.gamedeck'),
     allOpen = [],
     gamedeck = cards.length / 2;
+    delay = 500;
 
 // =================================CARD SHUFFLE=========================== //
 // on page open, or on restart, cards are reshuffled
@@ -35,6 +36,7 @@ let addCardListener = function() {
         
          //check for matching cards
         opened = [];
+        delay = 500;
         //if a card has already been clicked (i.e. the opened array contains a card i.e. has an array
         //length greater than one (opened.length > 1)
         if (opened.length > 1 && card === opened[0]) {
@@ -48,6 +50,17 @@ let addCardListener = function() {
             $gamedeck.find('.open').addClass('nonmatched');
         };
 
+        //okay, so once matched/nonmatched are added, the open/show class needs to be removed,
+        // so that the card closes? So, search gamedeck for open classes and remove class?
+        // $gamedeck.find('.open').removeClass('open show')
+        
+        //need to put some delays in to give the user some time to visually register the 
+        //events happening so delay = 500 ms
+        //maybe use settimeout?
+        //setTimeout (function () {
+        //insert event?;    
+        //}, delay);
+        
     });
 }
 
