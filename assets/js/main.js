@@ -47,20 +47,22 @@ let addCardListener = function() {
         //but only do this if that card *is already in gamedeck*.
         //if open card is not already in game deck, I should add a 'nonmatched' class. 
         else {
-            $gamedeck.find('.open').addClass('nonmatched');
-        };
-
         //okay, so once matched/nonmatched are added, the open/show class needs to be removed,
         // so that the card closes? So, search gamedeck for open classes and remove class?
         // $gamedeck.find('.open').removeClass('open show')
-        
+            $gamedeck.find('.open').addClass('nonmatched');
         //need to put some delays in to give the user some time to visually register the 
         //events happening so delay = 500 ms
         //maybe use settimeout?
         //setTimeout (function () {
         //insert event?;    
         //}, delay);
-        
+            setTimeout(function () {
+                $gamedeck.find('.open').removeClass('open show');    
+            }, delay);
+        };
+
+
     });
 }
 
