@@ -14,3 +14,13 @@ flexbox
 googlefonts
 
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+
+Inspired by:
+
+https://codepen.io/natewiley/pen/HBrbL
+https://codepen.io/zerospree/pen/bNWbvW
+https://codepen.io/mel/pen/Brads
+https://codepen.io/eliortabeka/pen/WwzEEg
+https://www.taniarascia.com/how-to-create-a-memory-game-super-mario-with-plain-javascript/
+https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript#toc-requirements-for-the-game
