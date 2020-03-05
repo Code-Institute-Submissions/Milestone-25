@@ -32,10 +32,17 @@ let addCardListener = function() {
         let card = $this.context.innerHTML;
         $this.addClass('open show');
         allOpen.push(card);
+        
+         //check for matching cards
+        //if a card has already been clicked (i.e. the opened array contains a card i.e. has an array
+        //length greater than one (opened.length > 1)
+        //then I need to parse the gamedeck to find any item with the class 'open', and add class of 'matched'
+        //to that item.
+        //but only do this if that card *is already in gamedeck*.
+        //if open card is not already in game deck, I should add a 'nonmatched' class. 
 
     });
 }
-
 
 // =================================START GAME=========================== //  
 function startgame() {
@@ -51,7 +58,6 @@ function startgame() {
     //calls the card listner function
     addCardListener();
     updatetime();
-
 }
 
 // =================================TIMER COUNTDOWN=========================== //
@@ -77,7 +83,7 @@ startgame();
  
     //if timer = 0, game over
 
-    // on click, moves increases by 1
+    // on match attempt, moves increases by 1
 
     // if moves > 40, game over
 
