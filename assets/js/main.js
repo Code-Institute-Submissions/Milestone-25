@@ -34,12 +34,19 @@ let addCardListener = function() {
         allOpen.push(card);
         
          //check for matching cards
+        opened = [];
         //if a card has already been clicked (i.e. the opened array contains a card i.e. has an array
         //length greater than one (opened.length > 1)
+        if (opened.length > 1 && card === opened[0]) {
         //then I need to parse the gamedeck to find any item with the class 'open', and add class of 'matched'
         //to that item.
+            $gamedeck.find('.open').addClass('matched');
+        }
         //but only do this if that card *is already in gamedeck*.
         //if open card is not already in game deck, I should add a 'nonmatched' class. 
+        else {
+            $gamedeck.find('.open').addClass('nonmatched');
+        };
 
     });
 }

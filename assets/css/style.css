@@ -181,7 +181,7 @@ a:hover {
     opacity: 0.9;
 }
 
-.gamedeck .card.match {
+.gamedeck .card.matched {
     cursor: default;
     background: #02ccba;
     font-size: 50px;
