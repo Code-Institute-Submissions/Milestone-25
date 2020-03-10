@@ -4,9 +4,10 @@
     $gameContainer = $('.gameContainer'),
     $gamedeck = $('.gamedeck'),
     opened = [],
-    gamedeck = cards.length / 2;
-  delay = 500;
-  matchcount = 0;
+    moves = 0,
+    gamedeck = cards.length / 2,
+    delay = 500,
+    matchcount = 0;
 
   // =================================CARD SHUFFLE=========================== //
   // on page open, or on restart, cards are reshuffled
@@ -69,6 +70,9 @@
 
         opened = [];
         delay = 500;
+        moves++;
+
+
       }
 
     });
@@ -89,6 +93,16 @@
     addCardListener();
     updatetime();
   }
+  
+  // =================================END GAME=========================== //  
+  
+  //if match counter = 9, player wins.
+
+  //if match counter = 9, timer stops
+  function endgame(matchcount) {
+    
+  }
+  
 
   // =================================TIMER COUNTDOWN=========================== //
   //on page open, timer counts from 59 secs down    
