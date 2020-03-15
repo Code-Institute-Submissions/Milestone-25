@@ -73,7 +73,9 @@
 
         opened = [];
         delay = 500;
+        //increases move counter
         countmoves++;
+        //displayes move counter to html for player
         $countmoves.html(countmoves);
       }
 
@@ -95,9 +97,6 @@
     addCardListener();
     updatetime();
     
-
-
-
   }
 
   // =================================END GAME=========================== //  
@@ -106,7 +105,6 @@
 
   //if match counter = 9, timer stops
   function endgame(matchcount) {
-
   }
 
 
@@ -122,45 +120,20 @@
     });
   };
   
-  // =================================MOVE COUNTER=========================== //
-  
-
-  
   setInterval(updatetime, 1000);
 
   startgame();
 
 
 
-
-  //on reset, cards shuffled, reset game board, reset timer 
-
-
-  //if timer = 0, game over
-
-  // on match attempt, moves increases by 1
-
-  // if moves > 40, game over
-
-  // on click:
-  //if no other card active, flip card and set to active
-  //if other card active, compare img of both active cards
-  //if img match, match counter increase by one
-  //on no match, both cards return to rest state
-
-  //(no. of cards = 18)
-
-  //if match counter = 9, player wins.
-
-  //if match counter = 9, timer stops
-
-  //score? = at win, total moves and total time remaining
-
-  //set keyboard (p)ause and (esc)ape actions
-
-  //if player wins, produce success message (and rating out of three?)
-
-  //if player loses (out of time, or exceeds moves), produce loss message
-
-  //
+  //LEFT TO DO:
   
+  // win criteria: match count == 9 
+  
+  // win outcome: timer stops, success message
+  
+  // fail criteria: timer == 0, countmoves >= 20
+  
+  // fail outcome: timer stops, game over message
+  
+  // reset option: reset timer, countmoves, reshuffle, flip to hide
