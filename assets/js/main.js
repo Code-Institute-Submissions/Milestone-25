@@ -6,10 +6,11 @@
     opened = [],
     gamedeck = cards.length / 2,
     delay = 500,
-    matchcount = 0;
+    matchcount = 0,
     
-  let moves = 0;
-  let counter = $('.moves');
+    $countmoves = $('.moves'),
+    countmoves = 0;
+    
 
   // =================================CARD SHUFFLE=========================== //
   // on page open, or on restart, cards are reshuffled
@@ -72,7 +73,8 @@
 
         opened = [];
         delay = 500;
-        countMoves();
+        countmoves++;
+        $countmoves.html(countmoves);
       }
 
     });
@@ -93,8 +95,7 @@
     addCardListener();
     updatetime();
     
-    moves = 0;
-    counter.innerHTML = moves;
+
 
 
   }
@@ -123,10 +124,7 @@
   
   // =================================MOVE COUNTER=========================== //
   
-  function countMoves(){
-    moves++;
-    counter.innerHTML = moves;
-  };
+
   
   setInterval(updatetime, 1000);
 
