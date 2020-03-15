@@ -7,10 +7,10 @@
     gamedeck = cards.length / 2,
     delay = 500,
     matchcount = 0,
-    
+
     $countmoves = $('.moves'),
     countmoves = 0;
-    
+
 
   // =================================CARD SHUFFLE=========================== //
   // on page open, or on restart, cards are reshuffled
@@ -96,7 +96,7 @@
     //calls the card listner function
     addCardListener();
     updatetime();
-    
+
   }
 
   // =================================END GAME=========================== //  
@@ -104,36 +104,57 @@
   //if match counter = 9, player wins.
 
   //if match counter = 9, timer stops
-  function endgame(matchcount) {
-  }
+  function endgame(matchcount) {}
 
 
   // =================================TIMER COUNTDOWN=========================== //
-  //on page open, timer counts from 59 secs down    
-  //  need to sort for time rather than no.?
+  // on page click, 1 minute timer begins countdown
+
+  $(document.body).click(function() {
+    $('.minute').html('0');
+    let countmin = parseInt($('.minute').html());
+    if (countmin == 0) {
+      $('.seconds').html('59');
+    }
+    setInterval(updatetime, 1000);
+  });
+
   let updatetime = function() {
-    $('.timer').each(function() {
-      var count = parseInt($(this).html());
+    $('.seconds').each(function() {
+      let count = parseInt($(this).html());
       if (count !== 0) {
-        $(this).html(count - 1);
+        if (count < 11) {
+          $(this).html('0' + (count - 1));
+        }
+        else {
+          $(this).html(count - 1);
+        }
       }
     });
   };
-  
-  setInterval(updatetime, 1000);
+
+  // =================================RESET FUNCTION=========================== //
+
 
   startgame();
 
 
 
   //LEFT TO DO:
-  
+
   // win criteria: match count == 9 
-  
+
   // win outcome: timer stops, success message
-  
+
   // fail criteria: timer == 0, countmoves >= 20
-  
+
   // fail outcome: timer stops, game over message
-  
+
   // reset option: reset timer, countmoves, reshuffle, flip to hide
+
+  // add breakpoints to ensure cross-platform usage
+
+  // write readme
+
+  // deploy
+  
