@@ -202,10 +202,11 @@ a:hover {
     bottom: 0;
     left: 0;
     right: 0;
+    visibility: hidden;
 }
 
 .box {
-    font-size:125%;
+    font-size: 125%;
     color: #000000;
     margin: 7%;
     padding: 5%;
@@ -224,4 +225,3 @@ a:hover {
     padding-top: 1.5%;
     width: 75%;
 }
-
