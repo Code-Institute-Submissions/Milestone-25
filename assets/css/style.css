@@ -49,7 +49,6 @@ body {
     margin-bottom: 10%;
     font-size: 350%;
     padding-top: 1.5%;
-
 }
 
 
@@ -189,6 +188,13 @@ a:hover {
 
 /*--------------------Overlay Styling -------------*/
 
+.title {
+    display: inline-block;
+    margin-left: 6%;
+    margin-right: 6%;
+    font-size: 400%;
+}
+
 .overlay {
     background: rgba(0, 0, 0, 0.7);
     position: fixed;
@@ -198,9 +204,24 @@ a:hover {
     right: 0;
 }
 
-.title {
-    display: inline-block;
-    margin-left: 6%;
-    margin-right: 6%;
-    margin-top: 25%;
+.box {
+    font-size:125%;
+    color: #000000;
+    margin: 7%;
+    padding: 5%;
+    background: #ffffff;
+    border-radius: 10px;
+    position: relative;
+    margin-top: 15%;
 }
+
+.btn-replay {
+    background-color: #c30e0e;
+    border-color: #c30e0e;
+    font-size: 175%;
+    color: #ffffff;
+    margin-left: 12%;
+    padding-top: 1.5%;
+    width: 75%;
+}
+
