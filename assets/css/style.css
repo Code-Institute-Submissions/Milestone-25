@@ -62,6 +62,12 @@ body {
     margin-right: 6%;
 }
 
+.title {
+    display: inline-block;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
 
 /*--------------GAME.html styling---------*/
 

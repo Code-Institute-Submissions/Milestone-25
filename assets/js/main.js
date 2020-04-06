@@ -95,29 +95,41 @@
     }
     //calls the card listner function
     addCardListener();
+    tickingclock();
     updatetime();
 
-  }
+  };
 
   // =================================END GAME=========================== //  
 
-  //if match counter = 9, player wins.
 
-  //if match counter = 9, timer stops
-  function endgame(matchcount) {}
+  function wingame() {
+    if (matchcount == 9) {
+      
+    }
+  }
+  
+  function failgame() {
+    let count = parseInt($('.seconds').html());
+    if (count == 0) {
+      
+    } else if (countmoves == 21) {
+      
+    }
+  }
 
 
   // =================================TIMER COUNTDOWN=========================== //
   // on page click, 1 minute timer begins countdown
 
-  $(document.body).click(function() {
+  let tickingclock = function() {
     $('.minute').html('0');
     let countmin = parseInt($('.minute').html());
     if (countmin == 0) {
-      $('.seconds').html('59');
+      $('.seconds').html('60');
     }
     setInterval(updatetime, 1000);
-  });
+  };
 
   let updatetime = function() {
     $('.seconds').each(function() {
@@ -141,6 +153,8 @@
 
 
   //LEFT TO DO:
+  
+  // get startgame(); to load on page ready/ player click?
 
   // win criteria: match count == 9 
 

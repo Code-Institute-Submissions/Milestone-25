@@ -35,14 +35,30 @@
       <div class="col-md">
         <p class="instructions">AGENT, YOU’VE BEEN COMPROMISED.</p>
         <p class="instructions">Remain calm. We've deployed an extraction team to your last known co-ordinates - not ideal, given that you've been on the run the past couple of days – so we’re going to need to work together if you’re going to get out of this alive.</p>
-        <p class="instructions"> For the extraction team to find you, we're going to need you correctly match the deck of paired cards that have been left in the safe house. You’ve got 90 seconds to match each pair of images – but don’t just randomly guess; if you take more than
-          30 moves to make all 9 matches an alarm will lock you out of our systems for good. You can hit the restart button at anytime and the deck, timer, and move count will reset.</p>
+        <p class="instructions"> For the extraction team to find you, we're going to need you correctly match the deck of paired cards that have been left in the safe house. You’ve got 60 seconds to match each pair of images – but don’t just randomly guess; if you take more than
+          21 moves to make all 9 matches an alarm will lock you out of our systems. You can hit the restart button at anytime and the deck, timer, and move count will reset.</p>
         <p class="instructions"> Make the matches, and your updated coordinates will be sent across… fail any of these requirements and you’re on your own.</p>
-        <p class="instructions"> Good luck, Agent.</p>
+        <p class="instructions"> Good luck Agent,</p>
+        <p class="instructions"> G.M.</p>
       </div>
     </div>
   </div>
 
+<!-- testing game popup --> 
+  <!-- mission success overlay -->
+  <div id="success" class="overlay">
+    <h2 class="title">Mission Success</h2>
+    <p class="instructions">Excellent work Agent. You beat the system in only *number* seconds with *number* moves. The Extraction Team has received your coordinates and is on route - while you wait, why not give the test another go? Just for fun this time. See you soon, Agent.</p>
+    <div>restart button</div>
+  </div>
+
+  <!-- mission failure overlay -->
+  <div id="failure" class="overlay">
+    <h2 class="title">Mission Failure</h2>
+    <p class="instructions">Agent. AGENT. This is not good. I've managed to get a softlock on your loaction, but can't confirm extraction until I've received your coordinates. Try again.</p>
+     <p class="instructions">And Agent? No mistkaes this time.</p>
+     <div>restart button</div>
+  </div>
 
 
 </body>
