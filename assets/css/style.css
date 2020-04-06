@@ -62,12 +62,6 @@ body {
     margin-right: 6%;
 }
 
-.title {
-    display: inline-block;
-    margin-left: 6%;
-    margin-right: 6%;
-}
-
 
 /*--------------GAME.html styling---------*/
 
@@ -191,4 +185,22 @@ a:hover {
     cursor: default;
     background: #523632;
     font-size: 75px;
+}
+
+/*--------------------Overlay Styling -------------*/
+
+.overlay {
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.title {
+    display: inline-block;
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: 25%;
 }
