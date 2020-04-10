@@ -225,3 +225,8 @@ a:hover {
     padding-top: 1.5%;
     width: 75%;
 }
+
+.show {
+	visibility: visible !important;
+	opacity: 100 !important;
+}

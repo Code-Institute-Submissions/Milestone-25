@@ -104,17 +104,20 @@
 
 
   function wingame() {
-    if (matchcount == 9) {
-      
+    let missionsuccess = document.getElementsByClassName("overlay")
+    if (matchcount == 0) {
+      missionsuccess.classList.add("show");
     }
   }
-  
+
   function failgame() {
     let count = parseInt($('.seconds').html());
     if (count == 0) {
-      
-    } else if (countmoves == 21) {
-      
+      let failure = document.getElementById("failure");
+      failure.classList.add("show");
+    }
+    else if (countmoves == 21) {
+
     }
   }
 
@@ -150,10 +153,16 @@
 
   startgame();
 
+  function replay() {
+    let missionsuccess = document.getElementsByClassName("overlay");
+    missionsuccess.classList.add("show");
+    startgame();
+  }
+
 
 
   //LEFT TO DO:
-  
+
   // get startgame(); to load on page ready/ player click?
 
   // win criteria: match count == 9 
