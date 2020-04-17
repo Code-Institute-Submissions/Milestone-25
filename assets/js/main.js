@@ -29,12 +29,14 @@
     return array;
   }
 
+
+
   // =================================CLICK TO VIEW=========================== //
   //binds all items with class 'card' to click function
   let addCardListener = function() {
     $gamedeck.find('.card').bind('click', function() {
       let $this = $(this);
-      if ($this.hasClass('matched') || $this.hasClass('show')) { return true; }
+      if ($this.hasClass('matched') || $this.hasClass('show') || $this.hasClass('locked')) { return true; }
 
       //need to add check for the existing classes of show and/or matched 
       // i.e. should only push cards to opened if they have these classes
@@ -55,9 +57,10 @@
           //then I need to parse the gamedeck to find any item with the class 'open', and add class of 'matched'
           //to that item.
           $gamedeck.find('.open').addClass('matched');
-          setTimeout(function() {
-            $gamedeck.find('.open').removeClass('open show');
-          }, delay);
+          $gamedeck.find('.open').removeClass('open');
+          // setTimeout(function() {
+          //   $gamedeck.find('.open').removeClass('open show');
+          // }, delay);
           //but only do this if that card *is already in gamedeck*.
           //if open card is not already in game deck, I should add a 'nonmatched' class.
           matchcount++;
@@ -70,8 +73,10 @@
           // so that the card closes
           $gamedeck.find('.open').addClass('nonmatched');
           //need to put some delays in to give the user some time to visually register the events
+          $gamedeck.find('.card').addClass('locked');
           setTimeout(function() {
             $gamedeck.find('.open').removeClass('open show');
+            $gamedeck.find('.card').removeClass('locked');
           }, delay);
         }
 
@@ -99,8 +104,8 @@
     }
     //calls the card listner function
     addCardListener();
-    tickingclock();
-    updatetime();
+    // tickingclock();
+    // updatetime();
   };
 
   // =================================END GAME=========================== //  
@@ -152,42 +157,44 @@
       failgame(count, countmoves);
     });
   };
+  
+  
+  let firstclick = false;
+  $('body').bind('click', function() {
+    if (firstclick == false) {
+      tickingclock();
+      updatetime();
+    }
+    firstclick = true;
+  });
+
 
   // =================================RESET FUNCTION=========================== //
-
 
   startgame();
 
   function replay() {
     window.location.reload();
-    // let missionsuccess = document.getElementById("success")
-    // missionsuccess.classList.add("d-none");
-    // let failure = document.getElementById("failure")
-    // failure.classList.add("d-none");
-    // matchcount = 0;
-    // countmoves = 0;
-    // $countmoves.html(countmoves);
-    // startgame();
   }
 
 
+
+
+
   //LEFT TO DO:
-  
-  // weird card sticking issue
-  
+
   // timer start on click, not on page load?
 
   // replay on return button
-  
+
   //add event listner, not 'onclick' html
 
-  // get startgame(); to load on page ready/ player click?
 
   // add breakpoints to ensure cross-platform usage
 
   // write readme
 
   // deploy
-  
+
   // submit
   

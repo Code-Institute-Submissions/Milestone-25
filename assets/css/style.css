@@ -19,11 +19,193 @@ xl devices (>1200px) = @media max-width: 1200px
 
 /* max-width, not min-width, for mobile-first styling */
 
-@media (max-width: 992px) {}
+@media (max-width: 992px) {
+    
+    .navbar {
+        padding: 0px;
+    }
 
-@media (max-width: 768px) {}
+    .navbar-brand {
+        margin-left: 10px;
+    }
 
-@media (max-width: 576px) {}
+    .nav-link {
+        padding-right: 10px;
+    }
+
+
+    .gamedeck {
+        min-height: 00px;
+        width: 325px;
+        justify-content: flex-start;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+    }
+
+    .gamedeck .card {
+        height: 75px;
+        width: 75px;
+    }
+
+    .gamedeck .card.show {
+        font-size: 65px;
+    }
+
+    .requirements-timer {
+        margin-top: 0px;
+        font-size: 200%;
+    }
+
+    .requirements {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        width: 325px;
+        font-size: 150%;
+        padding-top: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .navbar {
+        padding: 0px;
+    }
+
+    .navbar-brand {
+        margin-left: 10px;
+    }
+
+    .nav-link {
+        padding-right: 10px;
+    }
+
+
+    .gamedeck {
+        min-height: 00px;
+        width: 325px;
+        justify-content: flex-start;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+    }
+
+    .gamedeck .card {
+        height: 75px;
+        width: 75px;
+    }
+
+    .gamedeck .card.show {
+        font-size: 65px;
+    }
+
+    .requirements-timer {
+        margin-top: 0px;
+        font-size: 200%;
+    }
+
+    .requirements {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        width: 325px;
+        font-size: 150%;
+        padding-top: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    
+    .navbar {
+        padding: 0px;
+    }
+
+    .navbar-brand {
+        margin-left: 10px;
+    }
+
+    .nav-link {
+        padding-right: 10px;
+    }
+
+
+    .gamedeck {
+        min-height: 00px;
+        width: 325px;
+        justify-content: flex-start;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+    }
+
+    .gamedeck .card {
+        height: 75px;
+        width: 75px;
+    }
+
+    .gamedeck .card.show {
+        font-size: 65px;
+    }
+
+    .requirements-timer {
+        margin-top: 0px;
+        font-size: 200%;
+    }
+
+    .requirements {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        width: 325px;
+        font-size: 150%;
+        padding-top: 5px;
+    }
+}
+
+@media (max-width: 376px) {
+
+    .navbar {
+        padding: 0px;
+    }
+
+    .navbar-brand {
+        margin-left: 10px;
+    }
+
+    .nav-link {
+        padding-right: 10px;
+    }
+
+
+    .gamedeck {
+        min-height: 00px;
+        width: 325px;
+        justify-content: flex-start;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+    }
+
+    .gamedeck .card {
+        height: 75px;
+        width: 75px;
+    }
+
+    .gamedeck .card.show {
+        font-size: 65px;
+    }
+
+    .requirements-timer {
+        margin-top: 0px;
+        font-size: 200%;
+    }
+
+    .requirements {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        width: 325px;
+        font-size: 150%;
+        padding-top: 5px;
+    }
+}
 
 
 /* ==============STYLING==============*/
@@ -226,6 +408,6 @@ a:hover {
 }
 
 .show {
-	visibility: visible !important;
-	opacity: 100 !important;
+    visibility: visible !important;
+    opacity: 100 !important;
 }
