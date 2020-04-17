@@ -159,26 +159,35 @@
   startgame();
 
   function replay() {
-    let missionsuccess = document.getElementsByClassName("overlay");
-    missionsuccess.classList.add("show");
-    startgame();
+    window.location.reload();
+    // let missionsuccess = document.getElementById("success")
+    // missionsuccess.classList.add("d-none");
+    // let failure = document.getElementById("failure")
+    // failure.classList.add("d-none");
+    // matchcount = 0;
+    // countmoves = 0;
+    // $countmoves.html(countmoves);
+    // startgame();
   }
 
 
-
   //LEFT TO DO:
+  
+  // weird card sticking issue
+  
+  // timer start on click, not on page load?
+
+  // replay on return button
+  
+  //add event listner, not 'onclick' html
 
   // get startgame(); to load on page ready/ player click?
-
-  // fail criteria: timer == 0, countmoves >= 20
-
-  // fail outcome: timer stops, game over message
-
-  // reset option: reset timer, countmoves, reshuffle, flip to hide
 
   // add breakpoints to ensure cross-platform usage
 
   // write readme
 
   // deploy
+  
+  // submit
   
