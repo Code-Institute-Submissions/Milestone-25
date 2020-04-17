@@ -59,7 +59,8 @@
             $gamedeck.find('.open').removeClass('open show');
           }, delay);
           //but only do this if that card *is already in gamedeck*.
-          //if open card is not already in game deck, I should add a 'nonmatched' class. 
+          //if open card is not already in game deck, I should add a 'nonmatched' class.
+          matchcount++;
         }
         else {
           //okay, so once matched/nonmatched are added, the open/show class needs to be removed,
@@ -97,27 +98,26 @@
     addCardListener();
     tickingclock();
     updatetime();
-
   };
 
   // =================================END GAME=========================== //  
 
-
-  function wingame() {
-    let missionsuccess = document.getElementsByClassName("overlay")
+// sort win problem
+  function wingame(matchcount) {
+    let missionsuccess = document.getElementById("success")
     if (matchcount == 0) {
-      missionsuccess.classList.add("show");
+      missionsuccess.classList.remove("d-none");
     }
   }
 
-  function failgame() {
-    let count = parseInt($('.seconds').html());
+  function failgame(count, countmove) {
     if (count == 0) {
       let failure = document.getElementById("failure");
-      failure.classList.add("show");
+      failure.classList.remove("d-none");
     }
     else if (countmoves == 21) {
-
+      let failure = document.getElementById("failure");
+      failure.classList.remove("d-none");
     }
   }
 
@@ -137,14 +137,18 @@
   let updatetime = function() {
     $('.seconds').each(function() {
       let count = parseInt($(this).html());
-      if (count !== 0) {
-        if (count < 11) {
-          $(this).html('0' + (count - 1));
-        }
-        else {
-          $(this).html(count - 1);
+      let countmoves = parseInt($('.moves').html());
+      if (countmoves < 21) {
+        if (count !== 0) {
+          if (count < 11) {
+            $(this).html('0' + (count - 1));
+          }
+          else {
+            $(this).html(count - 1);
+          }
         }
       }
+      failgame(count, countmoves);
     });
   };
 
@@ -153,11 +157,11 @@
 
   startgame();
 
-  function replay() {
-    let missionsuccess = document.getElementsByClassName("overlay");
-    missionsuccess.classList.add("show");
-    startgame();
-  }
+  // function replay() {
+  //   let missionsuccess = document.getElementsByClassName("overlay");
+  //   missionsuccess.classList.add("show");
+  //   startgame();
+  // }
 
 
 

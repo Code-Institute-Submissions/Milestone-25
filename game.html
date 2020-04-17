@@ -30,9 +30,8 @@
     <ul class="gamedeck"></ul>
   </div>
 
-  <!-- testing game popup -->
   <!-- mission success overlay -->
-  <div id="success" class="overlay">
+  <div id="success" class="overlay d-none">
     <div class="box">
       <h2 class="title">Mission Success</h2>
       <p class="instructions">Excellent work Agent. You beat the system in only <span id=totaltime> </span> seconds with <span id=totalmoves> </span> moves. The Extraction Team has received your coordinates and is on route - while you wait, why not give the test another go?
@@ -42,7 +41,7 @@
   </div>
 
   <!-- mission failure overlay -->
-  <div id="failure" class="overlay">
+  <div id="failure" class="overlay d-none">
     <div class="box">
       <h2 class="title">Mission Failure</h2>
       <p class="instructions">Agent. AGENT. This is not good. I've managed to get a softlock on your loaction, but can't confirm extraction until I've received your coordinates. Try again.</p>
