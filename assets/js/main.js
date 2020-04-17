@@ -61,6 +61,9 @@
           //but only do this if that card *is already in gamedeck*.
           //if open card is not already in game deck, I should add a 'nonmatched' class.
           matchcount++;
+          if (matchcount == 9) {
+            wingame(matchcount);
+          }
         }
         else {
           //okay, so once matched/nonmatched are added, the open/show class needs to be removed,
@@ -102,12 +105,10 @@
 
   // =================================END GAME=========================== //  
 
-// sort win problem
+  // sort win problem
   function wingame(matchcount) {
     let missionsuccess = document.getElementById("success")
-    if (matchcount == 0) {
-      missionsuccess.classList.remove("d-none");
-    }
+    missionsuccess.classList.remove("d-none");
   }
 
   function failgame(count, countmove) {
@@ -157,21 +158,17 @@
 
   startgame();
 
-  // function replay() {
-  //   let missionsuccess = document.getElementsByClassName("overlay");
-  //   missionsuccess.classList.add("show");
-  //   startgame();
-  // }
+  function replay() {
+    let missionsuccess = document.getElementsByClassName("overlay");
+    missionsuccess.classList.add("show");
+    startgame();
+  }
 
 
 
   //LEFT TO DO:
 
   // get startgame(); to load on page ready/ player click?
-
-  // win criteria: match count == 9 
-
-  // win outcome: timer stops, success message
 
   // fail criteria: timer == 0, countmoves >= 20
 
