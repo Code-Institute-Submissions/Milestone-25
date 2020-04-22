@@ -10,157 +10,111 @@ sm devices (>576px) = @media max-width: 576px
 
 md devices (>768px) = @media max-width: 768px
 
-lg devices (>992px) = @media max-width: 992px
+lg devices (>1020px) = @media max-width: 1020px
 
 xl devices (>1200px) = @media max-width: 1200px
 */
 
 /*--------Media Queries--------*/
 
-/* max-width, not min-width, for mobile-first styling */
-
-@media (max-width: 992px) {
-    
-    .navbar {
-        padding: 0px;
-    }
-
-    .navbar-brand {
-        margin-left: 10px;
-    }
-
-    .nav-link {
-        padding-right: 10px;
-    }
-
+@media (max-width: 1020px) and (orientation: landscape) {
 
     .gamedeck {
         min-height: 00px;
-        width: 325px;
+        width: 900px;
+    }
+
+    .gamedeck .card {
+        height: 100px;
+        width: 105px;
+    }
+
+    .requirements {
+        width: 950px;
+        font-size: 200%;
+        margin-bottom: 10px;
+        margin-top: 30px;
+    }
+
+    .requirements-timer {
+        margin-top: 5px;
+    }
+
+    .title {
+        font-size: 300%;
+    }
+
+    .gamedeck .card.show {
+        font-size: 60px;
+    }
+    .gamedeck .card.matched {
+        font-size: 60px;
+    }
+
+    .box {
+        margin-top: 7%;
+    }
+
+}
+
+/* TABLET portrait */
+
+@media (max-width: 768px) and (orientation: portrait) {
+
+    .gamedeck {
+
+        min-height: 00px;
+
+        width: 730px;
+
         justify-content: flex-start;
-        padding-top: 20px;
-        padding-bottom: 20px;
 
     }
 
     .gamedeck .card {
-        height: 75px;
-        width: 75px;
-    }
 
-    .gamedeck .card.show {
-        font-size: 65px;
-    }
+        height: 120px;
 
-    .requirements-timer {
-        margin-top: 0px;
-        font-size: 200%;
+        width: 98px;
+
     }
 
     .requirements {
-        margin-top: 0px;
-        margin-bottom: 0px;
-        width: 325px;
-        font-size: 150%;
-        padding-top: 5px;
-    }
-}
 
-@media (max-width: 768px) {
-    
-    .navbar {
-        padding: 0px;
-    }
+        width: 700px;
 
-    .navbar-brand {
-        margin-left: 10px;
-    }
-
-    .nav-link {
-        padding-right: 10px;
-    }
-
-
-    .gamedeck {
-        min-height: 00px;
-        width: 325px;
-        justify-content: flex-start;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        font-size: 200%;
 
     }
 
-    .gamedeck .card {
-        height: 75px;
-        width: 75px;
+    .title {
+        font-size: 300%;
+
     }
 
     .gamedeck .card.show {
-        font-size: 65px;
+        font-size: 60px;
     }
 
-    .requirements-timer {
-        margin-top: 0px;
-        font-size: 200%;
-    }
-
-    .requirements {
-        margin-top: 0px;
-        margin-bottom: 0px;
-        width: 325px;
-        font-size: 150%;
-        padding-top: 5px;
+    .gamedeck .card.matched {
+        font-size: 60px;
     }
 }
+
+
+/* SMARTPHONES landscape */
 
 @media (max-width: 576px) {
-    
-    .navbar {
-        padding: 0px;
+    #onlyportrait {
+        visibility: visible !important;
     }
 
-    .navbar-brand {
-        margin-left: 10px;
-    }
-
-    .nav-link {
-        padding-right: 10px;
-    }
-
-
-    .gamedeck {
-        min-height: 00px;
-        width: 325px;
-        justify-content: flex-start;
-        padding-top: 20px;
-        padding-bottom: 20px;
-
-    }
-
-    .gamedeck .card {
-        height: 75px;
-        width: 75px;
-    }
-
-    .gamedeck .card.show {
-        font-size: 65px;
-    }
-
-    .requirements-timer {
-        margin-top: 0px;
-        font-size: 200%;
-    }
-
-    .requirements {
-        margin-top: 0px;
-        margin-bottom: 0px;
-        width: 325px;
-        font-size: 150%;
-        padding-top: 5px;
-    }
 }
 
-@media (max-width: 376px) {
+
+/* SMARTPHONES PORTRAIT */
+
+@media only screen and (max-width: 376px) and (orientation: portrait) {
 
     .navbar {
         padding: 0px;
@@ -193,6 +147,10 @@ xl devices (>1200px) = @media max-width: 1200px
         font-size: 65px;
     }
 
+    .gamedeck .card.matched {
+        font-size: 65px;
+    }
+
     .requirements-timer {
         margin-top: 0px;
         font-size: 200%;
@@ -201,9 +159,16 @@ xl devices (>1200px) = @media max-width: 1200px
     .requirements {
         margin-top: 0px;
         margin-bottom: 0px;
-        width: 325px;
+        width: 320px;
         font-size: 150%;
         padding-top: 5px;
+    }
+
+    .box {
+        margin: 0%;
+        padding-top: 10%;
+        font-size: 100%;
+
     }
 }
 
@@ -407,7 +372,10 @@ a:hover {
     width: 75%;
 }
 
-.show {
-    visibility: visible !important;
-    opacity: 100 !important;
-}
+/*.show {*/
+
+/*    visibility: visible !important;*/
+
+/*    opacity: 100 !important;*/
+
+/*}*/
