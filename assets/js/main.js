@@ -114,6 +114,11 @@
   function wingame(matchcount) {
     let missionsuccess = document.getElementById("success")
     missionsuccess.classList.remove("d-none");
+    
+    //show time + moves on overlay
+    let count = parseInt($('.seconds').html());
+    document.getElementById("totalmoves").innerHTML = (parseInt(countmoves) + 1);
+    document.getElementById("totaltime").innerHTML = (60 - parseInt(count));
   }
 
   // lose game overlay displayed
@@ -187,8 +192,6 @@
   //LEFT TO DO:
 
   // add breakpoints to ensure cross-platform usage
-
-  // clock stops when you win
 
   // generate time left + number of moves for success message
 
