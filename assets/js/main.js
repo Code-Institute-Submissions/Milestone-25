@@ -110,12 +110,13 @@
 
   // =================================END GAME=========================== //  
 
-  // sort win problem
+  //win game overlay displayed
   function wingame(matchcount) {
     let missionsuccess = document.getElementById("success")
     missionsuccess.classList.remove("d-none");
   }
 
+  // lose game overlay displayed
   function failgame(count, countmove) {
     if (count == 0) {
       let failure = document.getElementById("failure");
@@ -144,21 +145,23 @@
     $('.seconds').each(function() {
       let count = parseInt($(this).html());
       let countmoves = parseInt($('.moves').html());
-      if (countmoves < 21) {
-        if (count !== 0) {
-          if (count < 11) {
-            $(this).html('0' + (count - 1));
-          }
-          else {
-            $(this).html(count - 1);
+      if (matchcount != 9) {
+        if (countmoves < 21) {
+          if (count !== 0) {
+            if (count < 11) {
+              $(this).html('0' + (count - 1));
+            }
+            else {
+              $(this).html(count - 1);
+            }
           }
         }
+        failgame(count, countmoves);
       }
-      failgame(count, countmoves);
     });
   };
-  
-  
+
+
   let firstclick = false;
   $('body').bind('click', function() {
     if (firstclick == false) {
@@ -183,14 +186,13 @@
 
   //LEFT TO DO:
 
-  // timer start on click, not on page load?
-
-  // replay on return button
-
-  //add event listner, not 'onclick' html
-
-
   // add breakpoints to ensure cross-platform usage
+
+  // clock stops when you win
+
+  // generate time left + number of moves for success message
+
+  // add event listner, not 'onclick' html
 
   // write readme
 

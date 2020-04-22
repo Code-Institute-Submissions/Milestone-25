@@ -62,34 +62,23 @@ xl devices (>1200px) = @media max-width: 1200px
 @media (max-width: 768px) and (orientation: portrait) {
 
     .gamedeck {
-
         min-height: 00px;
-
         width: 730px;
-
         justify-content: flex-start;
-
     }
 
     .gamedeck .card {
-
         height: 120px;
-
         width: 98px;
-
     }
 
     .requirements {
-
         width: 700px;
-
         font-size: 200%;
-
     }
 
     .title {
         font-size: 300%;
-
     }
 
     .gamedeck .card.show {
@@ -359,7 +348,6 @@ a:hover {
     background: #ffffff;
     border-radius: 10px;
     position: relative;
-    margin-top: 15%;
 }
 
 .btn-replay {
@@ -372,10 +360,3 @@ a:hover {
     width: 75%;
 }
 
-/*.show {*/
-
-/*    visibility: visible !important;*/
-
-/*    opacity: 100 !important;*/
-
-/*}*/
