@@ -36,7 +36,7 @@
       <h2 class="title">Mission Success</h2>
       <p class="instructions">Excellent work Agent. You beat the system in only <span id=totaltime> </span> seconds with <span id=totalmoves> </span> moves. The Extraction Team has received your coordinates and is on route - while you wait, why not give the test another go?
         Just for fun this time. See you soon, <br> G.M.</p>
-      <a href="#"><button id="replay-button" onclick="replay()" type="button" class="btn btn-replay btn-block">REPLAY MISSION</button></a>
+      <button id="replay-button" onclick="replay()" type="button" class="btn btn-replay btn-block">REPLAY MISSION</button>
     </div>
   </div>
 
@@ -46,14 +46,14 @@
       <h2 class="title">Mission Failure</h2>
       <p class="instructions">Agent. AGENT. This is not good. I've managed to get a softlock on your loaction, but can't confirm extraction until I've received your coordinates. Try again.</p>
       <p class="instructions">And Agent? No mistakes this time.</p>
-      <a href="#"><button id="replay-button" onclick="replay()" type="button" class="btn btn-replay btn-block">REPLAY MISSION</button></a>
+      <button id="replay-button" type="button" class="btn btn-replay btn-block">REPLAY MISSION</button>
     </div>
   </div>
-  
-    <!-- overlay for portrait play -->
+
+  <!-- overlay for portrait play -->
   <div id="onlyportrait" class="overlay d-none">
     <div class="box">
-       <p class="instructions">Agent, your device needs to be held vertically (in portrait mode) to proceed. Reload - we don't have time to waste. </p>
+      <p class="instructions">Agent, your device needs to be held vertically (in portrait mode) to proceed. Reload - we don't have time to waste. </p>
     </div>
   </div>
 

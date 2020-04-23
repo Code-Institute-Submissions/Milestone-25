@@ -30,7 +30,6 @@
   }
 
 
-
   // =================================CLICK TO VIEW=========================== //
   //binds all items with class 'card' to click function
   let addCardListener = function() {
@@ -112,24 +111,25 @@
 
   //win game overlay displayed
   function wingame(matchcount) {
-    let missionsuccess = document.getElementById("success")
-    missionsuccess.classList.remove("d-none");
+    let missionsuccess = document.getElementById('success')
+    missionsuccess.classList.remove('d-none');
     
     //show time + moves on overlay
     let count = parseInt($('.seconds').html());
-    document.getElementById("totalmoves").innerHTML = (parseInt(countmoves) + 1);
-    document.getElementById("totaltime").innerHTML = (60 - parseInt(count));
+    document.getElementById('totalmoves').innerHTML = (parseInt(countmoves) + 1);
+    //shows time player has taken - NOT how much time left on clock.
+    document.getElementById('totaltime').innerHTML = (60 - parseInt(count));
   }
 
   // lose game overlay displayed
   function failgame(count, countmove) {
     if (count == 0) {
-      let failure = document.getElementById("failure");
-      failure.classList.remove("d-none");
+      let failure = document.getElementById('failure');
+      failure.classList.remove('d-none');
     }
     else if (countmoves == 21) {
-      let failure = document.getElementById("failure");
-      failure.classList.remove("d-none");
+      let failure = document.getElementById('failure');
+      failure.classList.remove('d-none');
     }
   }
 
@@ -179,11 +179,29 @@
 
   // =================================RESET FUNCTION=========================== //
 
+  
+  document.getElementById('replay-button').addEventListener('click', function() {
+      window.location.reload();
+  });
+
+  // function replay() {
+    
+  // }
+
+
+// document.getElementById('anchor').addEventListener('click', function() {
+//   console.log('anchor');
+// });
+
+
+
+
+
+
+
+
   startgame();
 
-  function replay() {
-    window.location.reload();
-  }
 
 
 
@@ -192,8 +210,8 @@
   //LEFT TO DO:
 
   // add breakpoints to ensure cross-platform usage
-
-  // generate time left + number of moves for success message
+  
+  // orientation display
 
   // add event listner, not 'onclick' html
 
