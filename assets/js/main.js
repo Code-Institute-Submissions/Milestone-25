@@ -5,12 +5,26 @@
     $gamedeck = $('.gamedeck'),
     opened = [],
     gamedeck = cards.length / 2,
-    delay = 500,
+    delay = 300,
     matchcount = 0,
 
     $countmoves = $('.moves'),
     countmoves = 0;
 
+  // =================================START GAME=========================== //  
+  function startgame() {
+    //calls the shuffle function on the cards array
+    let fullDeck = shuffle(cards);
+    $gamedeck.empty();
+    //the idea here is to loop through all fontawesome 'icons' stored in 'cards' array, adding the html class of 'card'
+    // (and hence the corresponding css styling), then to add each individiual array item as an actual fa icon
+    // inspired by https://codepen.io/eliortabeka/pen/WwzEEg
+    for (let i = 0; i < fullDeck.length; i++) {
+      $gamedeck.append($('<li class="card"><i class="fa fa-' + fullDeck[i] + '"></i></li>'))
+    }
+    //calls the card listner function
+    addCardListener();
+  };
 
   // =================================CARD SHUFFLE=========================== //
   // on page open, or on restart, cards are reshuffled
@@ -28,7 +42,6 @@
     }
     return array;
   }
-
 
   // =================================CLICK TO VIEW=========================== //
   //binds all items with class 'card' to click function
@@ -89,23 +102,6 @@
 
     });
   }
-
-  // =================================START GAME=========================== //  
-  function startgame() {
-    //calls the shuffle function on the cards array
-    let fullDeck = shuffle(cards);
-    $gamedeck.empty();
-    //the idea here is to loop through all fontawesome 'icons' stored in 'cards' array, adding the html class of 'card'
-    // (and hence the corresponding css styling), then to add each individiual array item as an actual fa icon
-    // inspired by https://codepen.io/eliortabeka/pen/WwzEEg
-    for (let i = 0; i < fullDeck.length; i++) {
-      $gamedeck.append($('<li class="card"><i class="fa fa-' + fullDeck[i] + '"></i></li>'))
-    }
-    //calls the card listner function
-    addCardListener();
-    // tickingclock();
-    // updatetime();
-  };
 
   // =================================END GAME=========================== //  
 
@@ -183,21 +179,10 @@
   document.getElementById('replay-button').addEventListener('click', function() {
       window.location.reload();
   });
-
-  // function replay() {
-    
-  // }
-
-
-// document.getElementById('anchor').addEventListener('click', function() {
-//   console.log('anchor');
-// });
-
-
-
-
-
-
+  
+    document.getElementById('replay-button2').addEventListener('click', function() {
+      window.location.reload();
+  });
 
 
   startgame();
@@ -212,8 +197,6 @@
   // add breakpoints to ensure cross-platform usage
   
   // orientation display
-
-  // add event listner, not 'onclick' html
   
   // 'features' section
   
