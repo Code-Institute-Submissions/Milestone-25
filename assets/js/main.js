@@ -214,8 +214,10 @@
   // orientation display
 
   // add event listner, not 'onclick' html
-
-  // write readme
+  
+  // 'features' section
+  
+  // 'testing' section
 
   // deploy
 

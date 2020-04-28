@@ -3,23 +3,26 @@ CODE INSTITUTE MILESTONE 2:
 MISSION: MEMORYPHILE
 ----------------------------
 >The concept behind this project is a spy-themed memory matching game, with a landing page setting the theme (providing the ‘mission’, and explaining the rules of the game), with a second page containing the game itself.
+>
 >The game is made up of 18 squares, containing 9 hidden matching pairs. The player is able to click a square, revealing an image, then attempt to pair this image with its match by clicking another square to reveal a new image. Should the two images match, the cards remain revealed and the player’s score increases by one. Should the two images not match, both cards will return to their hidden state. Once all pairs are matched and revealed, the player wins – and a ‘mission success’ message is displayed, giving the player a summary of their score and providing the option to play again. 
+>
 >In addition to the match mechanic, game play has two further parameters; moves and time. The player has 60 seconds, and 20 moves in which to make all correct matches (this is to add some challenge to the game, and to prevent rapid random clicking as a means to win). Should the timer hit zero, or player moves hit 21, a ‘mission failure’ message is displayed, and the player is given the chance to play again.
+>
 >At any point during the game, the player is able to return to the instructions by clicking the ‘home’ icon, or restart a new game by hitting the ‘replay’ button. 
 
 ### External User’s Goal: ###
 
- * The site’s users are . 
+ * The site’s users are people seeking a quick, fun distraction to fill time.
  
 ### Site Owner’s Goal: ###
 
- * The Mighty Nein are interested in attracting and maintaining clients, and gathering new quests
+ * The site developer wants to provide a basic game for people to enjoy.
 
 ### Features include: ###
 
- * Showcase images of the group, and a video clip of their adventures
- * Publicise availability and event dates, alongside social media
- * Provide detail about specific members, with link to character information
+ * Landing page with instructions and theme
+ * Game page with matching game, timer and move counter
+ * Success/ failure instances, with the option to replay
 
 DEMO
 ----
@@ -35,30 +38,25 @@ I’m waiting in a queue, and I want a distraction. I load the Memoryphile game 
 
 ### Strategy ###
 
-As a group, the Mighty Nein is a goofy mixture of characters who are thrust into world-ending problems and a war between two nations. As such, I wanted to strike a balance between epic adventure and fun whimsy in the UI for this page; the Mighty Nein are very accomplished sellswords but are not always the most professional. For potential employers, the page 
-needed to have a clear, easy-to-navigate layout, with information easily accessible, and the personality of the group conveyed. 
+For players, the page needed to have a clear, easy-to-navigate layout, with a rapidly deployed and re-playable game. The theme of old-school spies is to provide some context and flavour to the game play, as well as a narrative for the instructions.
 
 ### Scope ###
 
-For fans of the Mighty Nein, I wanted them to be able to find their favourite members quickly in an interactive carousel, alongside plenty of access points for more in-depth information. The about section and the short video clip enables employers to rapidly get a feel for the group, with a contact form should they wish to enquire about hiring the Mighty Nein.
+For people seeking to play the game, I wanted to make the gameplay as clear, concise, and intuitive as possible. While many people have played matching-type games before, I wanted to ensure they understood the limitations of this version of the game. The instructions quickly clarify this, with the displayed clock and move counter on the game play page reinforcing these limitations. The success/ failure messages clearly re-iterate these two game mechanics to the player. 
 
 ### Structure ###
 
-For the character carousel, I wanted a clear overview of the numerous characters, alongside specific links to their wikipages. I wanted both fans and employers to be able to get specific information within three clicks; one to get on to the website, one on the navigation bar to jump to whicherver section of interest, and one to interact with their area of choice - more character information, starting the video, following a social media link, or contacting the group.
+I wanted the gameplay to never be more than one click away - from the home page, the game page is on a one-button link, returning to the landing page is one-click, replaying the game is one-click, etc.
 
 ### Skeleton ###
 
-Sketch wireframes for the mobile version of the game can be found here (home page, game page).
-Sketch wireframes for the web version of the game can be found here (home page, game page). 
-Colour design wireframes for the mobile version of the game can be found here (home page, game page).
+The initial wireframes were pen-on paper, and can be found as jpegs under the ‘wireframes’ folder of this project ([Home Page - mobile](./WireFrames/HomeMobScreen.jpg) and [Game Page - mobile](./WireFrames/GameMobScreen.jpg)) and [Home Page - desktop](./WireFrames/HomeWebScreen.jpg) and [Game Page - desktop](./WireFrames/GameWebScreen.jpg) ). 
 
-The initial wireframes were pen-on paper, and can be found as jpegs under the ‘wireframes’ folder of this project ([Mobile Sketch 1](./WireFrames/Mobile-Sketch-1.jpg) and [Mobile Sketch 2](./WireFrames/Mobile-Sketch-2.jpg), and [Website sketch 1](./WireFrames/Website-sketch-1.jpg) and [Website sketch 2](./WireFrames/Website-sketch-2.jpg) ). 
-
-The secondary wireframes, created using Adobe XD, are in the same folder ([M9 Mobile](./WireFrames/M9-Mobile-Wireframe.jpg) and [Web wireframes](./WireFrames/M9-Web-Wireframe.jpg) ). 
+The secondary wireframes, created using Adobe XD, are in the same folder (for mobile: [Home Page](./WireFrames/MobScreen1.jpg) and [Game Page](./WireFrames/MobScreen2.jpg). For desktop: [Home Page](./WireFrames/WebScreen1.jpg) and [Game Page](./WireFrames/WebScreen2.jpg) ). 
 
 ### Surface ###
 
-The deep blues and bright oranges were chosen to give a dynamic, exciting feel, and to fit with the group colours of the Mighty nein. 
+The greyscale colour scheme was used to reference black-and-white spy films, with the use of red as the sole splash of colour to capture the idea of an 'emergency'; inspired by the 'big red button' concept from popculture. 
 
 
 FEATURES
@@ -107,8 +105,7 @@ The components of the game include:
 
 FEATURES LEFT TO IMPLEMENT
 --------------------------
-Have separate failure messages for when a player runs out of time vs. when they have reached the move limit. 
-
+Have separate failure messages for when a player runs out of time vs. when they have reached the move limit. I would also like to implement a 'level' system, where the game becomes more challenging (either by increasing the number of cards to be matched, decreasing the number of moves of time allowed, etc.). This could either be on repeated replay, or by allowing the player to select the difficulty level at the start. 
 
 
 TECHNOLOGIES USED
@@ -120,19 +117,15 @@ TECHNOLOGIES USED
     --> front-end component library used for DOM and framework
 
 [JQuery](https://jquery.com/)
-    --> simplify DOM manipulation, and originally to allow the active scrolling status of the character carousel, though this was later replaced by Flickity's framework. 
+    --> simplify DOM manipulation etc. 
     
 [Fontawesome](https://fontawesome.com/)
-    --> for social media symbols
+    --> for images on cards
     
 [Googlefonts](https://fonts.google.com/)
     --> for cross-page font styling
-    
-[Flickity](https://flickity.metafizzy.co/)
-    --> library - used for responsive carousel, with multi-cell display. Inner carousel cards reliant on bootstrap styling.
-    
-[SCSS/SASS](https://sass-lang.com/) and [CSS3 Compass](http://compass-style.org/) were used for the original attempt at creating a multi-layered parallax scrolling effect, as seen in previous versions of the site. Both technologies were removed when this scrolling effect was scrapped.
 
+    
 TESTING
 -------
 ### Automated Code Testing ###
@@ -183,103 +176,30 @@ CREDITS
 -------
 ### Content ###
 
-The text for the about section was written by myself. All other text content is externally linked.
+All text was written by myself. 
 
-Inspiration for basic webpage layout from [***Drew Ryan***](https://www.youtube.com/channel/UCtXGz0MBuqZUC8rmGddc07Q). Code for all sections of the page significantly modified; the inspiration was largely stylistic, and has drastically changed across versioning. 
+Inspiration for the basic game from several codepen games which can be found at:
+* https://codepen.io/natewiley/pen/HBrbL
+* https://codepen.io/zerospree/pen/bNWbvW
+* https://codepen.io/mel/pen/Brads
+* https://codepen.io/eliortabeka/pen/WwzEEg
+* https://www.taniarascia.com/how-to-create-a-memory-game-super-mario-with-plain-javascript/
+* https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript#toc-requirements-for-the-game
 
-Implementation of flickity was drawn from flickity documentation, found on the flickity [website](https://flickity.metafizzy.co/)
+Code for all sections of the page significantly modified; the inspiration was largely stylistic, and has drastically changed across versioning. 
 
-Styling for iframe inspired by [embed responsively](https://embedresponsively.com/), though largely modified
+Implementation of flexbox for casing the game deck was drawn from css-tricks, found on the css-tricks [website](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
+The shuffle function was found at [stackoverflow](http://stackoverflow.com/a/2450976), and has been properly credited in the code.  
 
 ### Media: ###
 
-Official critical role art is done by Ari ([@ornerine](https://twitter.com/ornerine)), and may be found at:
-
-**Jester image:**
-
-https://pbs.twimg.com/profile_images/954040496544010241/bBcHcX7a.jpg
-
-**Yasha image:**
-
-https://vignette.wikia.nocookie.net/criticalrole/images/9/92/Yasha.jpg/revision/latest/scale-to-width-down/310?cb=20180116194508
-
-**Fjord image:**
-
-https://vignette.wikia.nocookie.net/criticalrole/images/2/24/Fjord.jpg/revision/latest?cb=20180116194444
-
-**Caleb image:**
-
-https://vignette.wikia.nocookie.net/criticalrole/images/9/92/Caleb_Widogast.jpg/revision/latest?cb=20180116194349
-
-**Caduceus image:**
-
-https://vignette.wikia.nocookie.net/criticalrole/images/7/78/Caduceus_portrait.jpg/revision/latest?cb=20180727064924&format=original
-
-**Mollymauk image:**
-
-https://vignette.wikia.nocookie.net/criticalrole/images/c/ce/Mollymauk.jpg/revision/latest/scale-to-width-down/310?cb=20180116194455
-
-**Beauregard image:**
-
-https://vignette.wikia.nocookie.net/criticalrole/images/3/3e/Beauregard.jpg/revision/latest/scale-to-width-down/310?cb=20180116194433
-
-**Nott image:**
-
-https://vignette.wikia.nocookie.net/criticalrole/images/d/dc/Nott.jpg/revision/latest?cb=20180116194408
-
-**Keg image:**
-
-https://vignette.wikia.nocookie.net/criticalrole/images/3/3d/Keg_portrait_by_Ari.jpg/revision/latest?cb=20180713210444
-
-**Nila image:**
-
-https://geekandsundry.com/wp-content/uploads/2018/07/sumaleeportrait.png
-
-**Reani image:**
-
-https://vignette.wikia.nocookie.net/criticalrole/images/0/08/Reani_-_Official_Art_Portrait.jpg/revision/latest?cb=20190812205713
-
-**Shakäste image:**
-
-https://media-waterdeep.cursecdn.com/attachments/3/464/shakaste.jpg
-
-**Twiggy image:**
-
-https://vignette.wikia.nocookie.net/criticalrole/images/7/7e/Twiggy_Portrait_by_Ari.jpg/revision/latest?cb=20181214042136
-
-**M99 image:**
-
-https://vignette.wikia.nocookie.net/criticalrole/images/9/9c/Mighy_Nein_by_Ariana_Orner.png/revision/latest?cb=20190906065232
-
-**Logo image:**
-
-https://thelongshotist.com/wp-content/uploads/2017/09/CriticalRole_Logo.png
-
-**Parallax image (BBG):**
-
-http://hdqwalls.com/wallpapers/warriors-mighty-nein-minimalist-art-85.jpg
+Images used were sourced from [fontawesome](https://fontawesome.com/)
 
 
 THIS SITE IS FOR EDUCATIONAL PURPOSES ONLY
 ==========================================
 
 
-Resources:
-
-Bootstrap
-fontawesome
-flexbox
-googlefonts
-
-https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 
-Inspired by:
-
-https://codepen.io/natewiley/pen/HBrbL
-https://codepen.io/zerospree/pen/bNWbvW
-https://codepen.io/mel/pen/Brads
-https://codepen.io/eliortabeka/pen/WwzEEg
-https://www.taniarascia.com/how-to-create-a-memory-game-super-mario-with-plain-javascript/
-https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript#toc-requirements-for-the-game
