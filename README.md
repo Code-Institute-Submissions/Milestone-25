@@ -50,9 +50,9 @@ I wanted the gameplay to never be more than one click away - from the home page,
 
 ### Skeleton ###
 
-The initial wireframes were pen-on paper, and can be found as jpegs under the ‘wireframes’ folder of this project ([Home Page - mobile](./WireFrames/HomeMobScreen.jpg) and [Game Page - mobile](./WireFrames/GameMobScreen.jpg)) and [Home Page - desktop](./WireFrames/HomeWebScreen.jpg) and [Game Page - desktop](./WireFrames/GameWebScreen.jpg) ). 
+The initial wireframes were pen-on paper, and can be found as jpegs under the ‘wireframes’ folder of this project ([Home Page - mobile](./assets/wireframes/HomeMobScreen.jpg) and [Game Page - mobile](./assets/wireframes/GameMobScreen.jpg)) and [Home Page - desktop](./assets/wireframes/HomeWebScreen.jpg) and [Game Page - desktop](./assets/wireframes/GameWebScreen.jpg) ). 
 
-The secondary wireframes, created using Adobe XD, are in the same folder (for mobile: [Home Page](./WireFrames/MobScreen1.jpg) and [Game Page](./WireFrames/MobScreen2.jpg). For desktop: [Home Page](./WireFrames/WebScreen1.jpg) and [Game Page](./WireFrames/WebScreen2.jpg) ). 
+The secondary wireframes, created using Adobe XD, are in the same folder (for mobile: [Home Page](./assets/wireframes/MobScreen1.jpg) and [Game Page](./assets/wireframes/MobScreen2.jpg). For desktop: [Home Page](./assets/wireframes/WebScreen1.jpg) and [Game Page](./assets/wireframes/WebScreen2.jpg) ). 
 
 ### Surface ###
 
