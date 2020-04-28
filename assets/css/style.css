@@ -1,167 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Homemade+Apple|Special+Elite&display=swap');
 
-/* ==============  MEDIA QUERIES   ==============*/
-
-/*--------Bootstrap Breakpoints---------*/
-
-/* xs devices (<576px) = default in Bootstrap (hence no media query)
-
-sm devices (>576px) = @media max-width: 576px
-
-md devices (>768px) = @media max-width: 768px
-
-lg devices (>1020px) = @media max-width: 1020px
-
-xl devices (>1200px) = @media max-width: 1200px
-*/
-
-/*--------Media Queries--------*/
-
-@media (max-width: 1020px) and (orientation: landscape) {
-
-    .gamedeck {
-        min-height: 00px;
-        width: 900px;
-    }
-
-    .gamedeck .card {
-        height: 100px;
-        width: 105px;
-    }
-
-    .requirements {
-        width: 950px;
-        font-size: 200%;
-        margin-bottom: 10px;
-        margin-top: 30px;
-    }
-
-    .requirements-timer {
-        margin-top: 5px;
-    }
-
-    .title {
-        font-size: 300%;
-    }
-
-    .gamedeck .card.show {
-        font-size: 60px;
-    }
-    .gamedeck .card.matched {
-        font-size: 60px;
-    }
-
-    .box {
-        margin-top: 7%;
-    }
-
-}
-
-/* TABLET portrait */
-
-@media (max-width: 768px) and (orientation: portrait) {
-
-    .gamedeck {
-        min-height: 00px;
-        width: 730px;
-        justify-content: flex-start;
-    }
-
-    .gamedeck .card {
-        height: 120px;
-        width: 98px;
-    }
-
-    .requirements {
-        width: 700px;
-        font-size: 200%;
-    }
-
-    .title {
-        font-size: 300%;
-    }
-
-    .gamedeck .card.show {
-        font-size: 60px;
-    }
-
-    .gamedeck .card.matched {
-        font-size: 60px;
-    }
-}
-
-
-/* SMARTPHONES landscape */
-
-@media (max-width: 576px) {
-    #onlyportrait {
-        visibility: visible !important;
-    }
-
-}
-
-
-/* SMARTPHONES PORTRAIT */
-
-@media only screen and (max-width: 376px) and (orientation: portrait) {
-
-    .navbar {
-        padding: 0px;
-    }
-
-    .navbar-brand {
-        margin-left: 10px;
-    }
-
-    .nav-link {
-        padding-right: 10px;
-    }
-
-
-    .gamedeck {
-        min-height: 00px;
-        width: 325px;
-        justify-content: flex-start;
-        padding-top: 20px;
-        padding-bottom: 20px;
-
-    }
-
-    .gamedeck .card {
-        height: 75px;
-        width: 75px;
-    }
-
-    .gamedeck .card.show {
-        font-size: 65px;
-    }
-
-    .gamedeck .card.matched {
-        font-size: 65px;
-    }
-
-    .requirements-timer {
-        margin-top: 0px;
-        font-size: 200%;
-    }
-
-    .requirements {
-        margin-top: 0px;
-        margin-bottom: 0px;
-        width: 320px;
-        font-size: 150%;
-        padding-top: 5px;
-    }
-
-    .box {
-        margin: 0%;
-        padding-top: 10%;
-        font-size: 100%;
-
-    }
-}
-
-
 /* ==============STYLING==============*/
 
 /*--------HTML, BODY Styling-----*/
@@ -358,5 +196,170 @@ a:hover {
     margin-left: 12%;
     padding-top: 1.5%;
     width: 75%;
+}
+
+#onlyportrait {
+    visibility: hidden;
+}
+
+/* ==============  MEDIA QUERIES   ==============*/
+
+/*--------Bootstrap Breakpoints---------*/
+
+/* xs devices (<576px) = default in Bootstrap (hence no media query)
+
+sm devices (>576px) = @media max-width: 576px
+
+md devices (>768px) = @media max-width: 768px
+
+lg devices (>1020px) = @media max-width: 1020px
+
+xl devices (>1200px) = @media max-width: 1200px
+*/
+
+/*--------Media Queries--------*/
+
+@media (max-width: 1025px) and (orientation: landscape) {
+
+    .gamedeck {
+        min-height: 00px;
+        width: 900px;
+    }
+
+    .gamedeck .card {
+        height: 100px;
+        width: 105px;
+    }
+
+    .requirements {
+        width: 950px;
+        font-size: 200%;
+        margin-bottom: 10px;
+        margin-top: 30px;
+    }
+
+    .requirements-timer {
+        margin-top: 5px;
+    }
+
+    .title {
+        font-size: 300%;
+    }
+
+    .gamedeck .card.show {
+        font-size: 60px;
+    }
+    .gamedeck .card.matched {
+        font-size: 60px;
+    }
+
+    .box {
+        margin-top: 7%;
+    }
+
+}
+
+/* TABLET portrait */
+
+@media (max-width: 768px) and (orientation: portrait) {
+
+    .gamedeck {
+        min-height: 00px;
+        width: 730px;
+        justify-content: flex-start;
+    }
+
+    .gamedeck .card {
+        height: 120px;
+        width: 98px;
+    }
+
+    .requirements {
+        width: 700px;
+        font-size: 200%;
+    }
+
+    .title {
+        font-size: 300%;
+    }
+
+    .gamedeck .card.show {
+        font-size: 60px;
+    }
+
+    .gamedeck .card.matched {
+        font-size: 60px;
+    }
+}
+
+
+/* SMARTPHONES landscape */
+
+@media (max-width: 750px) and (orientation: landscape) {
+    #onlyportrait {
+        visibility: visible;
+    }
+
+}
+
+
+/* SMARTPHONES PORTRAIT */
+
+@media only screen and (max-width: 415px) and (orientation: portrait) {
+
+    .navbar {
+        padding: 0px;
+    }
+
+    .navbar-brand {
+        margin-left: 10px;
+    }
+
+    .nav-link {
+        padding-right: 10px;
+    }
+
+
+    .gamedeck {
+        min-height: 00px;
+        width: 325px;
+        justify-content: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+    }
+
+    .gamedeck .card {
+        height: 70px;
+        width: 75px;
+    }
+
+    .gamedeck .card.show {
+        font-size: 55px;
+    }
+
+    .gamedeck .card.matched {
+        font-size: 55px;
+    }
+
+    .requirements-timer {
+        margin-top: 0px;
+        font-size: 200%;
+    }
+
+    .requirements {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        width: 320px;
+        font-size: 150%;
+        padding-top: 5px;
+    }
+
+    .box {
+        margin: 0%;
+        padding-top: 10%;
+        font-size: 100%;
+
+    }
 }
 

@@ -70,9 +70,6 @@
           //to that item.
           $gamedeck.find('.open').addClass('matched');
           $gamedeck.find('.open').removeClass('open');
-          // setTimeout(function() {
-          //   $gamedeck.find('.open').removeClass('open show');
-          // }, delay);
           //but only do this if that card *is already in gamedeck*.
           //if open card is not already in game deck, I should add a 'nonmatched' class.
           matchcount++;
@@ -187,22 +184,3 @@
 
   startgame();
 
-
-
-
-
-
-  //LEFT TO DO:
-
-  // add breakpoints to ensure cross-platform usage
-  
-  // orientation display
-  
-  // 'features' section
-  
-  // 'testing' section
-
-  // deploy
-
-  // submit
-  

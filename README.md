@@ -67,7 +67,7 @@ The components to the landing page include:
     * Displays logo, and frames the page
     
 2. Button to take player to the game page 
-    * Create a visual impact upon entering the page, including title and subtitle.
+    * Create a visual impact upon entering the page, and enables player to transfer to game page.
 
 3. Instructions for play
     * Guide to play, written in an old-school spy theme. 
@@ -100,7 +100,7 @@ The components of the game include:
     * Failure message displays as an overlay 
 
 9. Orientation overlay
-    * 
+    * Overlay when the game is opened on a mobile device in landscape mode - the game should only be played in portrait on mobile.
 
 
 FEATURES LEFT TO IMPLEMENT
@@ -138,9 +138,9 @@ I used [Responsinator](https://www.responsinator.com/) to check cross-platform w
 
 ### Manual User Story Testing ###
 
-All of the clickable links take the user to the correct corresponding webpage, using the target_blank attribute to open these links in a new tab. 
+All of the clickable links take the user to the correct corresponding webpage, target_blank attribute is not added because the game should not occur across multiple tabs. 
 
-The sub-heading "seekers of adventure. And Coin. And Donuts. And Shiny Things. And Educational Stuff", is set to be hidden on smaller screen sizes, as is the image of the mighty nein in the about section. This is to make the site experience less cluttered when using e.g. mobile.  
+The gamedeck, clock, movecounter and overlay all vary in size across different platforms so the user does not need to scroll around the screen (interrupting gameplay) to see the gamedeck.  
 
 Carousel:
 Use the navbar to jump to the "Character" section
@@ -163,7 +163,12 @@ Try to submit empty form, verify error appears in required fields
 Try to submit form with invalid email, verify email-specific error message is generated
 Try to submit with all valid input types, recieve no error messages
 
+
+### Problems Found and Resolved###
+
 I had some issues with bootstrap's autopadding, so overrode this is my own stylesheet.
+
+The most challenging problem to identify and solve was that of 'stciking' cards. Essentially, because of the 'open card' delay (the delay occuring when a player had opened two incorrect cards before those cards turned back over), if the player was clicking fast enough, they were able to open a third card when only two should be open at the time - so the extra card got stuck open. I couldn't remove this delay entirely, because the player needed to have time to see and register that the two cards were incorrect before they turned back over, but I also needed to make it so that a third card couldn't be opened during this time. To prevent this, I added a 'locked' condition and class to the code - wherein clicking would produce no effect. This condition occurs when two other non-matching cards are already open, and persists for the duration of the delay (300ms).
 
 
 DEPLOYMENT
@@ -201,5 +206,14 @@ THIS SITE IS FOR EDUCATIONAL PURPOSES ONLY
 ==========================================
 
 
+//TO DO
 
+  // fix break points
 
+  // 'testing' section
+
+  // deploy
+  
+  // check for deadcode
+  
+  // submit
