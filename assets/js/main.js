@@ -23,7 +23,7 @@ window.onload = function() {
     // (and hence the corresponding css styling), then to add each individiual array item as an actual fa icon
     // inspired by https://codepen.io/eliortabeka/pen/WwzEEg
     for (let i = 0; i < fullDeck.length; i++) {
-      $gamedeck.append($('<li class="card"><i class="fa fa-' + fullDeck[i] + '"></i></li>'));
+      $gamedeck.append($('<li class="card"><i class="fa fa-' + fullDeck[i] + '" alt="' + fullDeck[i] + '"></i></li>'));
     }
     //calls the card listner function
     addCardListener();
