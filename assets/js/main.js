@@ -1,8 +1,7 @@
 window.onload = function() {
 
-
   // =================================HOUSEKEEPING=========================== //  
-  // streamlining
+  // streamlining variables and creating text array for later html generation
   let cards = ['bomb', 'bomb', 'landmark', 'landmark', 'search', 'search', 'question-circle', 'question-circle', 'fighter-jet', 'fighter-jet', 'binoculars', 'binoculars', 'user-secret', 'user-secret', 'biohazard', 'biohazard', 'skull', 'skull'],
     $gameContainer = $('.gameContainer'),
     $gamedeck = $('.gamedeck'),
@@ -21,7 +20,6 @@ window.onload = function() {
     $gamedeck.empty();
     //the idea here is to loop through all fontawesome 'icons' stored in 'cards' array, adding the html class of 'card'
     // (and hence the corresponding css styling), then to add each individiual array item as an actual fa icon
-    // inspired by https://codepen.io/eliortabeka/pen/WwzEEg
     for (let i = 0; i < fullDeck.length; i++) {
       $gamedeck.append($('<li class="card"><i class="fa fa-' + fullDeck[i] + '" alt="' + fullDeck[i] + '"></i></li>'));
     }
@@ -30,7 +28,7 @@ window.onload = function() {
   }
 
   // =================================CARD SHUFFLE=========================== //
-  // on page open, or on restart, cards are reshuffled
+  // on page open, and on restart, cards are reshuffled
   // Shuffling function: from http://stackoverflow.com/a/2450976
   function shuffle(array) {
     let currentIndex = array.length,
@@ -55,14 +53,10 @@ window.onload = function() {
 
       //need to add check for the existing classes of show and/or matched 
       // i.e. should only push cards to opened if they have these classes
-      //if $this.hasClass?
-      //('show') && ('matched')
-      //('show') || ('matched')
       //should be true *****BEFORE*****
       let card = $this.context.innerHTML;
       $this.addClass('open show');
       opened.push(card);
-
 
       //check for matching cards
       //if a card has already been clicked (i.e. the opened array contains a card i.e. has an array
@@ -82,12 +76,13 @@ window.onload = function() {
         }
         else {
           //okay, so once matched/nonmatched are added, the open/show class needs to be removed,
-          // so that the card closes
+          //so that the card closes
           $gamedeck.find('.open').addClass('nonmatched');
           //need to put some delays in to give the user some time to visually register the events
           $gamedeck.find('.card').addClass('locked');
           setTimeout(function() {
             $gamedeck.find('.open').removeClass('open show');
+          //this is to 'lock' the open cards, and prevent user from spam clicking and breaking the game
             $gamedeck.find('.card').removeClass('locked');
           }, delay);
         }
@@ -132,7 +127,6 @@ window.onload = function() {
 
   // =================================TIMER COUNTDOWN=========================== //
   // on page click, 1 minute timer begins countdown
-
   let tickingclock = function() {
     $('.minute').html('0');
     let countmin = parseInt($('.minute').html());
