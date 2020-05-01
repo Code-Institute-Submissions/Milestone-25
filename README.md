@@ -134,34 +134,49 @@ The HTML of [Index.html](./index.html) was auto-checked through [W3C Markup Vali
 
 The CSS of [style.css](./assets/css/style.css)  was auto-checked through [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input). As with the HTML, I confirmed that the css stylesheet was clear of any basic errors by inputting the file into the automated system and running the check. The resulthere was ‘This document validates as CSS level 3 + SVG !’ i.e. with no errors found.
 
-I used [Responsinator](https://www.responsinator.com/) to check cross-platform website functionality, confirming that my break points/ media queries functioned correctly and responsively across different screen sizes. A screencapture of this may be found in the test-results folder as [responsive.mp4](./Test-Results/responsive.mp4)
+I used [Responsinator](https://www.responsinator.com/) to check cross-platform website functionality, confirming that my break points/ media queries functioned correctly and responsively across different screen sizes. A screencapture of this may be found in the test-results folder as [crossplatform](./assets/test-results/crossplatform.jpg)
+
+I used [Codebeautify](https://codebeautify.org/jsvalidate) to check main.js for errors, and only received a single 'unexpected let' error. I also tested with [another validator](https://validatejavascript.com/) using the 'standard' configuration - however, this validator did not recognize jQuery syntax e.g. '$', and threw an error for everytime it was used. 
 
 ### Manual User Story Testing ###
 
-All of the clickable links take the user to the correct corresponding webpage, target_blank attribute is not added because the game should not occur across multiple tabs. 
+All of the clickable links take the user to the correct corresponding webpage or event, target_blank attribute is not added because the game should not occur across multiple tabs. 
 
-The gamedeck, clock, movecounter and overlay all vary in size across different platforms so the user does not need to scroll around the screen (interrupting gameplay) to see the gamedeck.  
+The gamedeck, clock, movecounter and overlay all vary in size across different platforms so the user does not need to scroll around the screen (interrupting gameplay) to see the gamedeck. Screen sizes (e.g. mobile in landscape) which would make game play display too difficult now receives an overlay telling the user that the screen display is an issue. 
 
-Carousel:
-Use the navbar to jump to the "Character" section
-Try to scroll using edge buttons, verify that horizontal scrolling occurs
-Try to scroll using navigation dots, verify that horizontal scrolling occurs
-Try to scroll using click and drag, horizontal scrolling occurs
-Try to follow embedded character link, verify this link opens the character wiki in a new tab 
+Win playthrough:
+Land on hompage. Click 'begin mission' button, and am taken to the game.
+The game doesn't start until the first click within the gamedeck body.
+I click, the countdown timer begins, and I realize I forgot the instructions. I am able to click the 'home' icon in the nav bar, which takes me back to the instructions page.
+I click 'begin mission' to return to game, and start again.
+I click a card, and it is 'flipped' displaying an icon.
+I click another card; it is also 'flipped' to display an icon, but this does not match the first card. Both cards return to their start state (flipped back over) and the move counter goes up by one.
+I click two cards that do match, and these cards remain visible, greying out to visually indicate that they are correct. I am not able to click either of these cards anymore.
+I make all 9 matches before 21 moves, or the timer runs out. A display overlay appears, telling my how many moves and how long I took to win. 
+I click the replay button, and the game resets. 
+
+Fail playthrough (time):
+Land on hompage. Click 'begin mission' button, and am taken to the game.
+The game doesn't start until the first click within the gamedeck body.
+I click, the countdown timer begins, and I realize I forgot the instructions. I am able to click the 'home' icon in the nav bar, which takes me back to the instructions page.
+I click 'begin mission' to return to game, and start again.
+I click a card, and it is 'flipped' displaying an icon.
+I click another card; it is also 'flipped' to display an icon, but this does not match the first card. Both cards return to their start state (flipped back over) and the move counter goes up by one.
+I click two cards that do match, and these cards remain visible, greying out to visually indicate that they are correct. I am not able to click either of these cards anymore.
+I make all 9 matches before 21 moves, or the timer runs out. A display overlay appears, telling my how many moves and how long I took to win. 
+I click the replay button, and the game resets. 
 
 
-Video:
-Use the navbar to jump to the "Watch us in Action" section
-Try to play video, verify this starts the video on mute
-Try to change volume, verify volume control functions normally
-Try to change video to fullscreen and back, verify this does not affect playback
-
-
-Contact form:
-Use the navbar to jump to the "Contact" section
-Try to submit empty form, verify error appears in required fields
-Try to submit form with invalid email, verify email-specific error message is generated
-Try to submit with all valid input types, recieve no error messages
+Fail playthrough (moves):
+Land on hompage. Click 'begin mission' button, and am taken to the game.
+The game doesn't start until the first click within the gamedeck body.
+I click, the countdown timer begins, and I realize I forgot the instructions. I am able to click the 'home' icon in the nav bar, which takes me back to the instructions page.
+I click 'begin mission' to return to game, and start again.
+I click a card, and it is 'flipped' displaying an icon.
+I click another card; it is also 'flipped' to display an icon, but this does not match the first card. Both cards return to their start state (flipped back over) and the move counter goes up by one.
+I click two cards that do match, and these cards remain visible, greying out to visually indicate that they are correct. I am not able to click either of these cards anymore.
+I make all 9 matches before 21 moves, or the timer runs out. A display overlay appears, telling my how many moves and how long I took to win. 
+I click the replay button, and the game resets. 
 
 
 ### Problems Found and Resolved###
@@ -175,6 +190,15 @@ DEPLOYMENT
 ----------
 
 This site is hosted on GitHub pages, deployed directly from the master branch. The GitHub hosted live site auto-updates according to new repository pushes. By cloning the code on the GitHub pages, you can also run it locally on your machine.
+
+This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+
+In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
+
+Different values for environment variables (Heroku Config Vars)?
+Different configuration files?
+Separate git branch?
+In addition, if it is not obvious, you should also describe how to run your code locally.
 
 
 CREDITS
@@ -208,11 +232,10 @@ THIS SITE IS FOR EDUCATIONAL PURPOSES ONLY
 
 //TO DO
 
-  // fix break points
 
   // 'testing' section
 
-  // deploy
+  // deploy section
   
   // check for deadcode
   

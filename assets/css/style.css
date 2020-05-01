@@ -86,6 +86,7 @@ a:hover {
 
 .requirements .restart {
     float: right;
+    cursor: pointer;
 }
 
 .requirements .moves {
@@ -200,6 +201,13 @@ a:hover {
 
 #onlyportrait {
     visibility: hidden;
+}
+
+.verticalinstructions {
+    font-size: 100%;
+    display: inline-block;
+    margin-left: 6%;
+    margin-right: 6%;
 }
 
 /* ==============  MEDIA QUERIES   ==============*/
