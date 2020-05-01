@@ -50,9 +50,9 @@ I wanted the gameplay to never be more than one click away - from the home page,
 
 ### Skeleton ###
 
-The initial wireframes were pen-on paper, and can be found as jpegs under the ‘wireframes’ folder of this project ([Home Page - mobile](./assets/wireframes/HomeMobScreen.jpg) and [Game Page - mobile](./assets/wireframes/GameMobScreen.jpg)) and [Home Page - desktop](./assets/wireframes/HomeWebScreen.jpg) and [Game Page - desktop](./assets/wireframes/GameWebScreen.jpg) ). 
+The initial wireframes were pen-on paper, and can be found as jpegs under the ‘wireframes’ folder of this project ([Home Page - mobile](./assets/wireframes/homemobscreen.jpg) and [Game Page - mobile](./assets/wireframes/gamemobscreen.jpg)) and [Home Page - desktop](./assets/wireframes/homewebscreen.jpg) and [Game Page - desktop](./assets/wireframes/gamewebscreen.jpg) ). 
 
-The secondary wireframes, created using Adobe XD, are in the same folder (for mobile: [Home Page](./assets/wireframes/MobScreen1.jpg) and [Game Page](./assets/wireframes/MobScreen2.jpg). For desktop: [Home Page](./assets/wireframes/WebScreen1.jpg) and [Game Page](./assets/wireframes/WebScreen2.jpg) ). 
+The secondary wireframes, created using Adobe XD, are in the same folder (for mobile: [Home Page](./assets/wireframes/mobscreen1.jpg) and [Game Page](./assets/wireframes/mobscreen2.jpg). For desktop: [Home Page](./assets/wireframes/webscreen1.jpg) and [Game Page](./assets/wireframes/webscreen2.jpg) ). 
 
 ### Surface ###
 
@@ -179,16 +179,9 @@ The most challenging problem to identify and solve was that of 'stciking' cards.
 DEPLOYMENT
 ----------
 
-This site is hosted on GitHub pages, deployed directly from the master branch. The GitHub hosted live site auto-updates according to new repository pushes. By cloning the code on the GitHub pages, you can also run it locally on your machine.
+This site is hosted on GitHub pages, deployed directly from the master branch. To do this, I followed the steps as lain out on the set-up instructions page found [here](https://pages.github.com/). The GitHub hosted live site auto-updates according to new repository pushes - as such, there should be no differences in the local version and the live deployed version. 
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
-
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-
-Different values for environment variables (Heroku Config Vars)?
-Different configuration files?
-Separate git branch?
-In addition, if it is not obvious, you should also describe how to run your code locally.
+By cloning the code on the GitHub pages, you can also run it locally on your machine. E.g. click 'clone and download' then open in desktop. Select your local editor e.g Visual Studio Code, and open the code there. If you are using Visual Studio Code, you won't be able to preview the page without downloading an extension for live preview under available HTML preview extensions.
 
 
 CREDITS
@@ -223,8 +216,6 @@ THIS SITE IS FOR EDUCATIONAL PURPOSES ONLY
 //TO DO
 
   // add visual impairment alts.
-
-  // deploy section
   
   // check for deadcode
   
