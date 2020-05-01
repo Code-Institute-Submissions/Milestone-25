@@ -156,31 +156,17 @@ I click 'begin mission' to return to game, and start again.
 I click a card, and it is 'flipped' displaying an icon.
 I click another card; it is also 'flipped' to display an icon, but this does not match the first card. Both cards return to their start state (flipped back over) and the move counter goes up by one.
 I click two cards that do match, and these cards remain visible, greying out to visually indicate that they are correct. I am not able to click either of these cards anymore.
-I make all 9 matches before 21 moves, or the timer runs out. A display overlay appears, telling my how many moves and how long I took to win. 
+I make all 9 matches before 21 moves, or the timer runs out. A display overlay appears, telling me how many moves and how long I took to win. 
 I click the replay button, and the game resets. 
 
 Fail playthrough (time):
-Land on hompage. Click 'begin mission' button, and am taken to the game.
-The game doesn't start until the first click within the gamedeck body.
-I click, the countdown timer begins, and I realize I forgot the instructions. I am able to click the 'home' icon in the nav bar, which takes me back to the instructions page.
-I click 'begin mission' to return to game, and start again.
-I click a card, and it is 'flipped' displaying an icon.
-I click another card; it is also 'flipped' to display an icon, but this does not match the first card. Both cards return to their start state (flipped back over) and the move counter goes up by one.
-I click two cards that do match, and these cards remain visible, greying out to visually indicate that they are correct. I am not able to click either of these cards anymore.
-I make all 9 matches before 21 moves, or the timer runs out. A display overlay appears, telling my how many moves and how long I took to win. 
+As above, but I fail to make all 9 matches before the timer runs out. Timer hits 0, and a display overlay appears, telling me that I failed the mission. 
 I click the replay button, and the game resets. 
 
 
 Fail playthrough (moves):
-Land on hompage. Click 'begin mission' button, and am taken to the game.
-The game doesn't start until the first click within the gamedeck body.
-I click, the countdown timer begins, and I realize I forgot the instructions. I am able to click the 'home' icon in the nav bar, which takes me back to the instructions page.
-I click 'begin mission' to return to game, and start again.
-I click a card, and it is 'flipped' displaying an icon.
-I click another card; it is also 'flipped' to display an icon, but this does not match the first card. Both cards return to their start state (flipped back over) and the move counter goes up by one.
-I click two cards that do match, and these cards remain visible, greying out to visually indicate that they are correct. I am not able to click either of these cards anymore.
-I make all 9 matches before 21 moves, or the timer runs out. A display overlay appears, telling my how many moves and how long I took to win. 
-I click the replay button, and the game resets. 
+As with win playthrough, but I fail to make all 9 matches before the movecounter hits 21. A display overlay appears, telling me that I failed the mission. 
+I click the replay button, and the game resets.  
 
 
 ### Problems Found and Resolved###
@@ -236,8 +222,7 @@ THIS SITE IS FOR EDUCATIONAL PURPOSES ONLY
 
 //TO DO
 
-
-  // 'testing' section
+  // add visual impairment alts.
 
   // deploy section
   
