@@ -1,3 +1,6 @@
+window.onload = function() {
+
+
   // =================================HOUSEKEEPING=========================== //  
   // streamlining
   let cards = ['bomb', 'bomb', 'landmark', 'landmark', 'search', 'search', 'question-circle', 'question-circle', 'fighter-jet', 'fighter-jet', 'binoculars', 'binoculars', 'user-secret', 'user-secret', 'biohazard', 'biohazard', 'skull', 'skull'],
@@ -106,7 +109,7 @@
   function wingame(matchcount) {
     let missionsuccess = document.getElementById('success');
     missionsuccess.classList.remove('d-none');
-    
+
     //show time + moves on overlay
     let count = parseInt($('.seconds').html());
     document.getElementById('totalmoves').innerHTML = (parseInt(countmoves) + 1);
@@ -172,20 +175,23 @@
 
   // =================================RESET FUNCTION=========================== //
 
-  
-  document.getElementById('replay-button').addEventListener('click', function() {
-      window.location.reload();
-  });
-  
-    document.getElementById('replay-button2').addEventListener('click', function() {
-      window.location.reload();
-  });
-  
-      document.getElementById('replay-button3').addEventListener('click', function() {
-      window.location.reload();
-  });
+  let replay = document.getElementById('replay-button');
+  let replay2 = document.getElementById('replay-button2');
+  let replay3 = document.getElementById('replay-button3');
 
 
+  //putting in conditional to prevent TypeError on page load
+  if (replay || replay2 || replay3) {
+    replay.addEventListener('click', function() {
+      window.location.reload();
+    });
+    replay2.addEventListener('click', function() {
+      window.location.reload();
+    });
+    replay3.addEventListener('click', function() {
+      window.location.reload();
+    });
+  }
 
   startgame();
-
+};

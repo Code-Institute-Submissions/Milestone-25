@@ -107,6 +107,8 @@ FEATURES LEFT TO IMPLEMENT
 --------------------------
 Have separate failure messages for when a player runs out of time vs. when they have reached the move limit. I would also like to implement a 'level' system, where the game becomes more challenging (either by increasing the number of cards to be matched, decreasing the number of moves of time allowed, etc.). This could either be on repeated replay, or by allowing the player to select the difficulty level at the start. 
 
+It would also be good to get the game to reset without page reload.
+
 
 TECHNOLOGIES USED
 -----------------
@@ -136,7 +138,9 @@ The CSS of [style.css](./assets/css/style.css)  was auto-checked through [W3C CS
 
 I used [Responsinator](https://www.responsinator.com/) to check cross-platform website functionality, confirming that my break points/ media queries functioned correctly and responsively across different screen sizes. A screencapture of this may be found in the test-results folder as [crossplatform](./assets/test-results/crossplatform.jpg)
 
-I used [Codebeautify](https://codebeautify.org/jsvalidate) to check main.js for errors, and only received a single 'unexpected let' error. I also tested with [JSHint](https://jshint.com/), configured for jQuery, New JavaScript features (ES6) and Mozilla JavaScript extensions, receiving no major issues - just two unused variables. A capture of this result can be found [here](./assets/test-resets/jshint.jpg)
+I used [Codebeautify](https://codebeautify.org/jsvalidate) to check main.js for errors, and only received a single 'unexpected let' error. I also tested with [JSHint](https://jshint.com/), configured for jQuery, New JavaScript features (ES6) and Mozilla JavaScript extensions, receiving no major issues - just two unused variables. A capture of this result can be found [here](./assets/test-resets/jshint.jpg).
+
+A 503 error was noted in Chrome developer tools console, as a by-product of the site being hosted on AWS.
 
 ### Manual User Story Testing ###
 
